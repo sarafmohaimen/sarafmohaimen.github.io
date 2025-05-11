@@ -1,23 +1,15 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* A clean, readable sans-serif font */
-    margin: 40px; /* More generous overall margin */
-    line-height: 1.7; /* Improved line height for readability */
-    color: #333; /* Dark gray text */
-    background-color: #f8f8f8; /* Light gray background */
+    font-family: sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+    color: #333;
 }
 
 header {
-    background-color: transparent; /* Transparent header */
-    padding: 20px 0;
-    text-align: left; /* Align header text to the left */
-    margin-bottom: 30px;
-    border-bottom: 1px solid #eee; /* Light gray bottom border for separation */
-}
-
-header h1 {
-    font-size: 2.5em;
-    margin-bottom: 5px;
-    color: #222; /* Darker heading text */
+    background-color: #f4f4f4;
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 nav ul {
@@ -28,49 +20,28 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-right: 20px; /* Space between navigation items */
-}
-
-nav ul li:last-child {
-    margin-right: 0; /* Remove margin from the last item */
+    margin: 0 15px;
 }
 
 nav a {
     text-decoration: none;
-    color: #555; /* Medium gray link color */
-    font-weight: bold;
-    transition: color 0.3s ease; /* Smooth color transition on hover */
-}
-
-nav a:hover {
-    color: #007bff; /* Blue hover color */
+    color: #007bff;
 }
 
 main {
-    max-width: 960px; /* Slightly wider main content area */
+    max-width: 800px;
     margin: 0 auto;
-    padding: 30px 0; /* More vertical padding */
-    background-color: transparent; /* Transparent main background */
-}
-
-section {
-    margin-bottom: 40px; /* More space between sections */
-}
-
-section h2 {
-    font-size: 2em;
-    color: #222;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #ccc; /* Light gray bottom border for section headings */
-    padding-bottom: 5px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 footer {
     text-align: center;
-    margin-top: 40px;
-    padding: 20px 0;
-    background-color: #f8f8f8; /* Light gray footer background */
-    font-size: 0.9em;
+    margin-top: 20px;
+    padding: 10px 0;
+    background-color: #f4f4f4;
+    font-size: 0.8em;
     color: #777;
-    border-top: 1px solid #eee; /* Light gray top border for separation */
 }
