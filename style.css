@@ -37,6 +37,26 @@ main {
     border-radius: 5px;
 }
 
+#hero {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#hero img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+}
+
+#hero-text {
+    flex: 1;
+    min-width: 200px;
+}
+
 footer {
     text-align: center;
     margin-top: 20px;
