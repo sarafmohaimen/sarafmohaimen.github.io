@@ -39,22 +39,22 @@ main {
 
 #hero {
     display: flex;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    align-items: center; /* Vertically center image and text */
+    gap: 30px;
+    padding: 20px;
 }
 
 #hero img {
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
     object-fit: cover;
     border-radius: 50%;
     border: 2px solid #ccc;
+    flex-shrink: 0;
 }
 
 #hero-text {
     flex: 1;
-    min-width: 200px;
 }
 
 footer {
