@@ -39,8 +39,8 @@ main {
 
 #hero {
     display: flex;
-    align-items: center;       /* Vertically center the image and text */
-    justify-content: flex-start;
+    align-items: center;        /* Vertically center the image and text */
+    justify-content: flex-start; /* Align items to the start of the container */
     gap: 30px;
     padding: 20px;
     min-height: 200px;         /* Ensures there's enough height to center things nicely */
@@ -56,10 +56,13 @@ main {
 }
 
 #hero-text {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;   /* Vertically center content inside the text box */
+    flex: 1;                  /* Allows the text to take up the remaining space */
+}
+
+#hero-text h2,
+#hero-text p {
+    text-align: left;         /* Align the text within the #hero-text div to the left */
+    margin: 5px 0;            /* Add some vertical spacing for readability */
 }
 
 footer {
