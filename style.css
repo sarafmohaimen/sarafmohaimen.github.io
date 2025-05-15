@@ -1,15 +1,18 @@
 body {
-    font-family: sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 20px;
     line-height: 1.6;
     color: #333;
+    background-color: #fafafa;
+    transition: background-color 0.3s ease;
 }
 
 header {
-    background-color: #f4f4f4;
-    padding: 10px 0;
+    background-color: #f9f9f9;
+    padding: 20px 0;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
 }
 
 nav ul {
@@ -20,30 +23,36 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 12px;
 }
 
 nav a {
     text-decoration: none;
     color: #007bff;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: #0056b3;
 }
 
 main {
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    padding: 25px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    transition: box-shadow 0.3s ease;
 }
 
 #hero {
     display: flex;
-    align-items: center;        /* Vertically center the image and text */
-    justify-content: flex-start; /* Align items to the start of the container */
+    align-items: center;
     gap: 30px;
-    padding: 20px;
-    min-height: 200px;         /* Ensures there's enough height to center things nicely */
+    padding: 20px 0;
 }
 
 #hero img {
@@ -52,24 +61,29 @@ main {
     object-fit: cover;
     border-radius: 50%;
     border: 2px solid #ccc;
-    flex-shrink: 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 #hero-text {
-    flex: 1;                  /* Allows the text to take up the remaining space */
+    flex: 1;
 }
 
-#hero-text h2,
+#hero-text h2 {
+    font-size: 1.8em;
+    margin: 0 0 10px;
+}
+
 #hero-text p {
-    text-align: left;         /* Align the text within the #hero-text div to the left */
-    margin: 5px 0;            /* Add some vertical spacing for readability */
+    margin: 5px 0;
+    color: #555;
 }
 
 footer {
     text-align: center;
-    margin-top: 20px;
-    padding: 10px 0;
-    background-color: #f4f4f4;
-    font-size: 0.8em;
+    margin-top: 40px;
+    padding: 15px 0;
+    background-color: #f9f9f9;
+    font-size: 0.85em;
     color: #777;
+    border-top: 1px solid #ddd;
 }
