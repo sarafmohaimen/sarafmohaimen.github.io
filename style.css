@@ -1,3 +1,32 @@
+/* CSS Variables for Light and Dark Modes */
+:root {
+    --bg-color: #fdfdfd;
+    --text-color: #222;
+    --header-bg: #f0f0f0;
+    --main-bg: #ffffff;
+    --border-color: #ccc;
+    --link-color: #003087;
+    --link-hover: #0054a6;
+    --button-bg: #003087;
+    --button-hover: #0054a6;
+    --shadow-color: rgba(0, 0, 0, 0.05);
+    --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode {
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --header-bg: #2c2c2c;
+    --main-bg: #252525;
+    --border-color: #444;
+    --link-color: #4a8cff;
+    --link-hover: #7aa6ff;
+    --button-bg: #4a8cff;
+    --button-hover: #7aa6ff;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
 /* General Reset and Base Styles */
 * {
     box-sizing: border-box;
@@ -9,16 +38,17 @@ body {
     font-family: 'Merriweather', Georgia, serif;
     margin: 40px;
     line-height: 1.8;
-    color: #222;
-    background-color: #fdfdfd;
+    color: var(--text-color);
+    background: linear-gradient(to bottom, var(--bg-color) 0%, #f5f5f5 100%);
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 /* Header Styles */
 header {
-    background-color: #f0f0f0;
+    background-color: var(--header-bg);
     padding: 30px 0;
     text-align: center;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid var(--border-color);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -34,6 +64,7 @@ header h1 {
 /* Navigation Styles */
 nav[role="navigation"] {
     margin-top: 20px;
+    position: relative;
 }
 
 nav ul {
@@ -48,7 +79,7 @@ nav ul li {
 
 nav a {
     text-decoration: none;
-    color: #003366;
+    color: var(--link-color);
     font-weight: 500;
     font-size: 1.05em;
     transition: border-bottom 0.2s ease, color 0.2s ease;
@@ -56,24 +87,45 @@ nav a {
 }
 
 nav a:hover {
-    border-bottom: 2px solid #e67e22; /* Orange accent for hover */
-    color: #e67e22;
+    border-bottom: 2px solid var(--link-hover);
+    color: var(--link-hover);
 }
 
 nav a:focus {
-    outline: 2px solid #e67e22;
+    outline: 2px solid var(--link-hover);
+    outline-offset: 2px;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    color: var(--text-color);
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.theme-toggle:hover {
+    color: var(--link-hover);
+}
+
+.theme-toggle:focus {
+    outline: 2px solid var(--link-hover);
     outline-offset: 2px;
 }
 
 /* Main Content Styles */
 main {
-    max-width: 90%; /* Fluid width for better responsiveness */
+    max-width: 90%;
     max-width: 900px;
     margin: 0 auto;
     padding: 40px;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    background-color: var(--main-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 10px var(--shadow-color);
     border-radius: 8px;
 }
 
@@ -90,16 +142,24 @@ section {
 
 h2 {
     font-size: 1.8em;
-    color: #111;
-    border-bottom: 1px solid #ccc;
+    color: var(--text-color);
+    border-bottom: 1px solid var(--border-color);
     padding-bottom: 5px;
     margin-top: 40px;
+}
+
+h3 {
+    font-size: 1.4em;
+    color: var(--text-color);
+    margin: 20px 0 10px;
+    border-radius: 4px;
+    padding: 8px;
 }
 
 p {
     font-size: 1.05em;
     margin-top: 0.5em;
-    color: #333;
+    color: var(--text-color);
 }
 
 /* Hero Section */
@@ -108,7 +168,7 @@ p {
     align-items: center;
     gap: 30px;
     padding: 20px 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--border-color);
 }
 
 #hero img {
@@ -116,7 +176,7 @@ p {
     height: 160px;
     object-fit: cover;
     border-radius: 50%;
-    border: 2px solid #ccc;
+    border: 2px solid var(--border-color);
     transition: transform 0.2s ease;
 }
 
@@ -127,12 +187,12 @@ p {
 #hero-text h2 {
     font-size: 1.6em;
     margin: 0 0 10px;
-    color: #111;
+    color: var(--text-color);
 }
 
 #hero-text p {
     font-size: 1em;
-    color: #444;
+    color: var(--text-color);
 }
 
 /* Projects Section */
@@ -144,15 +204,15 @@ p {
 }
 
 .project-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: var(--main-bg);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 20px;
     transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .project-card:hover {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--card-shadow);
     transform: translateY(-5px);
 }
 
@@ -165,49 +225,79 @@ p {
 .project-card h3 {
     font-size: 1.4em;
     margin: 10px 0;
-    color: #111;
+    color: var(--text-color);
 }
 
 .project-card p {
     font-size: 1em;
-    color: #444;
+    color: var(--text-color);
+}
+
+/* Publication List Styles */
+.publication-group {
+    margin-bottom: 40px;
+}
+
+.publication-list {
+    list-style: none;
+    padding: 0;
+}
+
+.publication-list li {
+    background: linear-gradient(to bottom, var(--main-bg) 0%, #f5f5f5 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.dark-mode .publication-list li {
+    background: linear-gradient(to bottom, #252525 0%, #1e1e1e 100%);
+}
+
+.publication-list li:hover {
+    box-shadow: var(--card-shadow);
+    transform: translateY(-3px);
 }
 
 /* Button Styles */
 .button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #003366;
+    background: linear-gradient(to bottom, var(--button-bg) 0%, #002a6b 100%);
     color: #fff;
     border-radius: 5px;
     text-decoration: none;
-    transition: transform 0.2s ease, background-color 0.2s ease;
+    transition: transform 0.2s ease, background 0.2s ease;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px var(--shadow-color);
 }
 
 .button:hover {
-    background-color: #e67e22; /* Orange accent for hover */
+    background: linear-gradient(to bottom, var(--button-hover) 0%, #003c8f 100%);
     transform: scale(1.05);
     text-decoration: none;
 }
 
 .button:focus {
-    outline: 2px solid #e67e22;
+    outline: 2px solid var(--button-hover);
     outline-offset: 2px;
 }
 
 /* General Link Styles */
 a {
-    color: #e67e22; /* Updated to accent color */
+    color: var(--link-color);
     text-decoration: none;
 }
 
 a:hover {
-    color: #d35400; /* Darker orange for hover */
+    color: var(--link-hover);
     text-decoration: underline;
 }
 
 a:focus {
-    outline: 2px solid #e67e22;
+    outline: 2px solid var(--link-hover);
     outline-offset: 2px;
 }
 
@@ -216,10 +306,10 @@ footer {
     text-align: center;
     margin-top: 50px;
     padding: 20px 0;
-    background-color: #f0f0f0;
-    color: #666;
+    background-color: var(--header-bg);
+    color: var(--text-color);
     font-size: 0.9em;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid var(--border-color);
 }
 
 /* Responsive Design */
@@ -237,11 +327,33 @@ footer {
         display: block;
         margin: 10px 0;
     }
+    .nav-toggle {
+        display: block;
+        font-size: 1.5em;
+        background: none;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 60px;
+    }
+    .theme-toggle {
+        right: 20px;
+    }
+    nav ul {
+        display: none;
+    }
+    nav ul.active {
+        display: block;
+    }
     main {
         padding: 20px;
     }
     h2 {
         font-size: 1.5em;
+    }
+    h3 {
+        font-size: 1.3em;
     }
     #hero {
         flex-direction: column;
@@ -258,6 +370,6 @@ footer {
 
 @media (min-width: 768px) {
     header h1 {
-        font-size: 2.8em; /* Larger on desktop */
+        font-size: 2.8em;
     }
 }
