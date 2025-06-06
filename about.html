@@ -6,50 +6,50 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-XDLQ8RS51Q');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Saraf Mohaimen Chowdhury, an early-career researcher in quantum materials and nanoscale phenomena.">
+    <meta name="keywords" content="quantum materials, nanoscale phenomena, computational physics, portfolio">
     <title>About Me - Saraf Mohaimen Chowdhury</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <header role="banner">
         <h1>Saraf Mohaimen Chowdhury</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">Overview</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="tools.html">Tools & Software</a></li>
-                <li><a href="contact.html">Connections</a></li>
+        <nav role="navigation">
+            <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+            <ul id="nav-menu">
+                <li><a href="index.html" class="smooth-scroll">Home</a></li>
+                <li><a href="about.html" class="smooth-scroll">Overview</a></li>
+                <li><a href="publications.html" class="smooth-scroll">Publications</a></li>
+                <li><a href="projects.html" class="smooth-scroll">Projects</a></li>
+                <li><a href="tools.html" class="smooth-scroll">Tools & Software</a></li>
+                <li><a href="contact.html" class="smooth-scroll">Connections</a></li>
             </ul>
         </nav>
     </header>
-
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I am Saraf Mohaimen Chowdhury, an early-career researcher passionate about quantum materials and nanoscale phenomena. My research aims to understand the physical properties of nanomaterials using first-principles calculations, and explore how tiny structures from atomically thin layers to quantum dots—can lead to new possibilities in electronics, photonics, and information technologies. I’m particularly fascinated by how spins, light, and topology interact at the smallest scales, and how we can harness these effects for future technologies.         </section>
-        <section id="research-interests">
-            <h2>Research Interests</h2>
-            <p>
-                I enjoy how studying the tiny fragments of the universe can expose the deeper workings of nature. My research focuses on the properties and applications of low-dimensional quantum materials. I am particularly interested in:
-            </p>
+    <main role="main">
+        <section id="about" role="region" aria-labelledby="about-heading">
+            <h2 id="about-heading">About Me</h2>
+            <p>I am Saraf Mohaimen Chowdhury, an early-career researcher passionate about quantum materials and nanoscale phenomena. My research aims to understand the physical properties of nanomaterials using first-principles calculations, and explore how tiny structures from atomically thin layers to quantum dots—can lead to new possibilities in electronics, photonics, and information technologies. I’m particularly fascinated by how spins, light, and topology interact at the smallest scales, and how we can harness these effects for future technologies.</p>
+        </section>
+        <section id="research-interests" role="region" aria-labelledby="research-interests-heading">
+            <h2 id="research-interests-heading">Research Interests</h2>
+            <p>I enjoy how studying the tiny fragments of the universe can expose the deeper workings of nature. My research focuses on the properties and applications of low-dimensional quantum materials. I am particularly interested in:</p>
             <ul>
                 <li>Spin-Dynamics in Low-dimensional materials (2D monolayers, quantum dots, TM-based compounds)</li>
                 <li>Density Functional Theory (DFT) and various computational physics</li>
                 <li>Doping, defects, and surface effects in semiconductor nanoflakes</li>
-                <li>Topological behavior of materials</li> 
+                <li>Topological behavior of materials</li>
                 <li>Spin-resolved quantum transport and spintronic device modeling</li>
                 <li>Cavity Quantum Electrodynamics</li>
             </ul>
         </section>
-
-        <section id="books">
-            <h2>Academic Books That Influenced Me</h2>
+        <section id="books" role="region" aria-labelledby="books-heading">
+            <h2 id="books-heading">Academic Books That Influenced Me</h2>
             <ol>
                 <li><em>Molecular Quantum Mechanics</em> – Atkins & Friedman
                     <br><small>This text helped me build a foundational understanding of atomic-level interactions, their interpretations, and the conceptual basis of various approximation theories.</small>
@@ -65,9 +65,8 @@
                 </li>
             </ol>
         </section>
-
-        <section id="literatures">
-            <h2>Scientific Literatures That Shaped My Thinking</h2>
+        <section id="literatures" role="region" aria-labelledby="literatures-heading">
+            <h2 id="literatures-heading">Scientific Literatures That Shaped My Thinking</h2>
             <ol>
                 <li><em>Jiang, Xue, et al. "Recent progress on 2D magnets: Fundamental mechanism, structural design and modification." Applied Physics Reviews 8.3 (2021).</em>, Phys. Rev. (2010)
                     <br><small>Helped me to understand the characterization of intrinsic magnetism and defect-induced magnetizations.</small>
@@ -78,9 +77,9 @@
             </ol>
         </section>
     </main>
-
-    <footer>
-        <p>&copy; 2025 Saraf Mohaimen Chowdhury</p>
+    <footer role="contentinfo">
+        <p>© 2025 Saraf Mohaimen Chowdhury</p>
     </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>
