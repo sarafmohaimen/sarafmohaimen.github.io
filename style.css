@@ -127,6 +127,7 @@ nav a:focus {
     position: absolute;
     top: 20px;
     right: 60px;
+    /* This will be handled by media query for mobile visibility */
     display: none;
 }
 
@@ -345,32 +346,41 @@ footer {
     header h1 {
         font-size: 1.8em;
     }
+
+    /* Mobile Navigation Specifics */
     nav ul {
-        display: none;
-        background-color: var(--header-bg);
-        padding: 20px;
-        text-align: center;
-        border-top: 1px solid var(--border-color);
-        transition: max-height 0.3s ease-in-out;
+        /* Start hidden and transition height for a smooth reveal */
+        display: block; /* Change from none to block so transition works */
         max-height: 0;
         overflow: hidden;
+        background-color: var(--header-bg);
+        padding: 0 20px; /* Adjust padding for closed state */
+        text-align: center;
+        border-top: 1px solid var(--border-color);
+        transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out; /* Add padding to transition */
     }
+
     nav ul.active {
-        display: block;
-        max-height: 500px; /* Adjust based on content height */
+        max-height: 500px; /* Sufficient height to show all links */
+        padding: 20px; /* Padding for open state */
     }
+
     nav ul li {
         display: block;
         margin: 15px 0;
     }
+
     nav a {
         font-size: 1.1em;
         padding: 10px;
         display: block;
     }
+
+    /* Ensure nav-toggle is visible on mobile */
     .nav-toggle {
         display: block;
     }
+
     .theme-toggle {
         right: 20px;
     }
@@ -399,5 +409,16 @@ footer {
 @media (min-width: 768px) {
     header h1 {
         font-size: 2.8em;
+    }
+    /* Ensure navigation is displayed for desktop */
+    nav ul {
+        display: block;
+        max-height: initial; /* Override max-height from mobile styles */
+        overflow: visible; /* Override overflow from mobile styles */
+        padding: 0; /* Reset padding for desktop */
+        border-top: none; /* Remove border-top for desktop */
+    }
+    .nav-toggle {
+        display: none; /* Hide toggle button on desktop */
     }
 }
