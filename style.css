@@ -255,6 +255,34 @@ p {
     color: var(--text-color);
 }
 
+/* Publication List Styles */
+.publication-group {
+    margin-bottom: 40px;
+}
+
+.publication-list {
+    list-style: none;
+    padding: 0;
+}
+
+.publication-list li {
+    background: linear-gradient(to bottom, var(--main-bg) 0%, #f5f5f5 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.dark-mode .publication-list li {
+    background: linear-gradient(to bottom, #252525 0%, #1e1e1e 100%);
+}
+
+.publication-list li:hover {
+    box-shadow: var(--card-shadow);
+    transform: translateY(-3px);
+}
+
 /* Button Styles */
 .button {
     display: inline-block;
