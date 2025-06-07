@@ -11,13 +11,16 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Your Name</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Projects - Saraf Mohaimen Chowdhury</title> <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>Saraf Mohaimen Chowdhury</h1>
-        <nav>
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+            ☀️ </button>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            ☰ </button>
+        <nav role="navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">Overview</a></li>
@@ -34,13 +37,13 @@
             <h2>Projects</h2>
             <ul>
                 <li>
-                    <p>Absorption/Emission Spectrum of a Colloidal Quantum Dots: An FEM Investigation with Ansys Lumerical<p>
+                    <p>Absorption/Emission Spectrum of a Colloidal Quantum Dots: An FEM Investigation with Ansys Lumerical</p>
                 </li>
                 <li>
-                    <p>Analytical Solutions of the Pauli–Fierz Hamiltonian for a Two-Level System in a Single-Mode Cavity<p>
+                    <p>Analytical Solutions of the Pauli–Fierz Hamiltonian for a Two-Level System in a Single-Mode Cavity</p>
                 </li>
                 <li>
-                    <p>Predicting Solution of Single-Soliton using Bilinear Neural Network<p>
+                    <p>Predicting Solution of Single-Soliton using Bilinear Neural Network</p>
                     <em>Salena Akther, Saraf Mohaimen</em>
                 </li>
             </ul>
@@ -50,5 +53,37 @@
     <footer>
         <p>&copy; 2025 Saraf Mohaimen Chowdhury</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Navigation Toggle
+            const navToggle = document.querySelector('.nav-toggle');
+            const navUl = document.querySelector('nav ul');
+
+            if (navToggle && navUl) {
+                navToggle.addEventListener('click', function() {
+                    navUl.classList.toggle('active');
+                });
+            }
+
+            // Theme Toggle (if you have one in your CSS and want to make it functional)
+            const themeToggle = document.querySelector('.theme-toggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', function() {
+                    document.body.classList.toggle('dark-mode');
+                    // Optional: Save user preference to localStorage
+                    if (document.body.classList.contains('dark-mode')) {
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        localStorage.setItem('theme', 'light');
+                    }
+                });
+                // Optional: Apply saved theme on load
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.body.classList.add('dark-mode');
+                }
+            }
+        });
+    </script>
 </body>
 </html>
