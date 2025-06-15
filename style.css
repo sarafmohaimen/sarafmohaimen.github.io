@@ -347,22 +347,20 @@ footer {
         font-size: 1.8em;
     }
 
-    /* Mobile Navigation Specifics */
     nav ul {
-        /* Start hidden and transition height for a smooth reveal */
-        display: block; /* Change from none to block so transition works */
+        display: block;
         max-height: 0;
         overflow: hidden;
         background-color: var(--header-bg);
-        padding: 0 20px; /* Adjust padding for closed state */
+        padding: 0 20px;
         text-align: center;
         border-top: 1px solid var(--border-color);
-        transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out; /* Add padding to transition */
+        transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
     }
 
     nav ul.active {
-        max-height: 500px; /* Sufficient height to show all links */
-        padding: 20px; /* Padding for open state */
+        max-height: 500px;
+        padding: 20px;
     }
 
     nav ul li {
@@ -376,7 +374,6 @@ footer {
         display: block;
     }
 
-    /* Ensure nav-toggle is visible on mobile */
     .nav-toggle {
         display: block;
     }
@@ -384,23 +381,29 @@ footer {
     .theme-toggle {
         right: 20px;
     }
+
     main {
         padding: 20px;
     }
+
     h2 {
         font-size: 1.5em;
     }
+
     h3 {
         font-size: 1.3em;
     }
+
     #hero {
         flex-direction: column;
         text-align: center;
     }
+
     #hero img {
         width: 120px;
         height: 120px;
     }
+
     .projects {
         grid-template-columns: 1fr;
     }
@@ -410,15 +413,16 @@ footer {
     header h1 {
         font-size: 2.8em;
     }
-    /* Ensure navigation is displayed for desktop */
+
     nav ul {
         display: block;
-        max-height: initial; /* Override max-height from mobile styles */
-        overflow: visible; /* Override overflow from mobile styles */
-        padding: 0; /* Reset padding for desktop */
-        border-top: none; /* Remove border-top for desktop */
+        max-height: initial;
+        overflow: visible;
+        padding: 0;
+        border-top: none;
     }
+
     .nav-toggle {
-        display: none; /* Hide toggle button on desktop */
+        display: none;
     }
 }
