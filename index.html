@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta imię="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Personal academic website of Saraf Mohaimen Chowdhury, showcasing research, publications, and projects.">
     <meta property="og:title" content="Saraf Mohaimen Chowdhury's Academic Portfolio">
     <meta property="og:description" content="Explore my research, publications, and projects.">
@@ -10,13 +10,9 @@
     <meta property="og:url" content="https://yourgithubusername.github.io/your-repo/">
     <meta name="twitter:card" content="summary_large_image">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; img-src 'self'; style-src 'self';">
-    
     <title>Welcome to My Academic Website</title>
-    
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="favicon.png">
-
-    <!-- Google Analytics -->
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-XDLQ8RS51Q"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -25,23 +21,22 @@
       gtag('config', 'G-XDLQ8RS51Q');
     </script>
 </head>
-
 <body>
-    <header>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <header role="banner">
         <h1>Saraf Mohaimen Chowdhury</h1>
-        <button class="theme-toggle" aria-label="Toggle dark mode">
-            ☀️
-        </button>
+        <button class="theme-toggle" aria-label="Toggle dark mode">☀️</button>
         <button class="nav-toggle" aria-label="Toggle navigation">
-            ☰ </button>
+            <span class="visually-hidden">Menu</span>☰
+        </button>
         <nav role="navigation">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="Overview.html">Overview</a></li>
                 <li><a href="Publications.html">Publications</a></li>
                 <li><a href="Projects.html">Projects</a></li>
                 <li><a href="ToolsNSoft.html">Tools & Software</a></li>
-                <li><a href="Connections.html">Connections</a></li>
+                <a href="Connections.html">Connections</a></li>
             </ul>
         </nav>
     </header>
@@ -54,16 +49,19 @@
             <div class="hero-text">
                 <h2>Welcome!</h2>
                 <p>This is my personal academic website where you can find information about my research, publications, and projects.</p>
-                <a href="https://www.webofscience.com/wos/author/record/NFT-9432-2025" class="cta-button">View Me At Web of Science</a>
+                <a href=" Publications.html" class="cta-button">View My Publications</a>
             </div>
         </section>
     </main>
 
     <footer role="contentinfo">
         <p>© 2025 Saraf Mohaimen Chowdhury</p>
+        <div class="social-links">
+            <a href="https://github.com/yourusername" aria-label="GitHub">GitHub</a>
+            <a href="https://orcid.org/your-orcid-id" aria-label="ORCID">ORCID</a>
+        </div>
     </footer>
 
-    <!-- Theme and Navigation Script -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Mobile Navigation Toggle
