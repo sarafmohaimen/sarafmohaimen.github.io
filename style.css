@@ -1,6 +1,4 @@
-/* =============================== */
-/*        Light/Dark Variables     */
-/* =============================== */
+/* CSS Variables for Light and Dark Modes */
 :root {
     --bg-color: #fdfdfd;
     --text-color: #222;
@@ -29,9 +27,7 @@
     --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
-/* =============================== */
-/*          Base Styles            */
-/* =============================== */
+/* General Reset and Base Styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -42,19 +38,17 @@ body {
     font-family: 'Merriweather', Georgia, serif;
     margin: 40px;
     line-height: 1.8;
-    color: var(--text-color);
-    background: linear-gradient(to bottom, var(--bg-color) 0%, var(--main-bg) 100%);
+    color: var(--text-color); /* Correctly using var */
+    background: linear-gradient(to bottom, var(--bg-color) 0%, var(--main-bg) 100%); /* Using var for both colors in gradient */
     transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* =============================== */
-/*           Header                */
-/* =============================== */
+/* Header Styles */
 header {
-    background-color: var(--header-bg);
+    background-color: var(--header-bg); /* Correctly using var */
     padding: 30px 0;
     text-align: center;
-    border-bottom: 2px solid var(--border-color);
+    border-bottom: 2px solid var(--border-color); /* Correctly using var */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -65,12 +59,10 @@ header h1 {
     margin: 0;
     font-weight: 700;
     letter-spacing: 0.5px;
-    color: var(--text-color);
+    color: var(--text-color); /* Ensure heading color changes */
 }
 
-/* =============================== */
-/*          Navigation             */
-/* =============================== */
+/* Navigation Styles */
 nav[role="navigation"] {
     margin-top: 20px;
     position: relative;
@@ -88,7 +80,7 @@ nav ul li {
 
 nav a {
     text-decoration: none;
-    color: var(--link-color);
+    color: var(--link-color); /* Correctly using var */
     font-weight: 500;
     font-size: 1.05em;
     transition: border-bottom 0.2s ease, color 0.2s ease;
@@ -96,66 +88,72 @@ nav a {
 }
 
 nav a:hover {
-    border-bottom: 2px solid var(--link-hover);
-    color: var(--link-hover);
+    border-bottom: 2px solid var(--link-hover); /* Correctly using var */
+    color: var(--link-hover); /* Correctly using var */
 }
 
 nav a:focus {
-    outline: 2px solid var(--link-hover);
+    outline: 2px solid var(--link-hover); /* Correctly using var */
     outline-offset: 2px;
 }
 
-/* =============================== */
-/*       Theme Toggle Buttons      */
-/* =============================== */
-.theme-toggle,
-.nav-toggle {
+/* Theme Toggle Button */
+.theme-toggle {
     background: none;
     border: none;
     font-size: 1.2em;
-    color: var(--text-color);
+    color: var(--text-color); /* Correctly using var */
     cursor: pointer;
     position: absolute;
     top: 20px;
-}
-
-.theme-toggle {
     right: 20px;
 }
 
-.nav-toggle {
-    right: 60px;
-    font-size: 1.5em;
-    display: none;
+.theme-toggle:hover {
+    color: var(--link-hover); /* Correctly using var */
 }
 
-.theme-toggle:hover,
-.nav-toggle:hover {
-    color: var(--link-hover);
-}
-
-.theme-toggle:focus,
-.nav-toggle:focus {
-    outline: 2px solid var(--link-hover);
+.theme-toggle:focus {
+    outline: 2px solid var(--link-hover); /* Correctly using var */
     outline-offset: 2px;
 }
 
-/* =============================== */
-/*             Main               */
-/* =============================== */
+/* Nav Toggle Button */
+.nav-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: var(--text-color); /* Correctly using var */
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 60px;
+    /* This will be handled by media query for mobile visibility */
+    display: none;
+}
+
+.nav-toggle:hover {
+    color: var(--link-hover); /* Correctly using var */
+}
+
+.nav-toggle:focus {
+    outline: 2px solid var(--link-hover); /* Correctly using var */
+    outline-offset: 2px;
+}
+
+/* Main Content Styles */
 main {
+    max-width: 90%;
     max-width: 900px;
     margin: 0 auto;
     padding: 40px;
-    background-color: var(--main-bg);
-    border: 1px solid var(--border-color);
-    box-shadow: 0 0 10px var(--shadow-color);
+    background-color: var(--main-bg); /* Correctly using var */
+    border: 1px solid var(--border-color); /* Correctly using var */
+    box-shadow: 0 0 10px var(--shadow-color); /* Correctly using var */
     border-radius: 8px;
 }
 
-/* =============================== */
-/*           Sections              */
-/* =============================== */
+/* Section Styles */
 section {
     margin-bottom: 60px;
     opacity: 0;
@@ -163,22 +161,20 @@ section {
 }
 
 @keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
+    to { opacity: 1; }
 }
 
 h2 {
     font-size: 1.8em;
-    color: var(--text-color);
-    border-bottom: 1px solid var(--border-color);
+    color: var(--text-color); /* Correctly using var */
+    border-bottom: 1px solid var(--border-color); /* Correctly using var */
     padding-bottom: 5px;
     margin-top: 40px;
 }
 
 h3 {
     font-size: 1.4em;
-    color: var(--text-color);
+    color: var(--text-color); /* Correctly using var */
     margin: 20px 0 10px;
     border-radius: 4px;
     padding: 8px;
@@ -187,18 +183,16 @@ h3 {
 p {
     font-size: 1.05em;
     margin-top: 0.5em;
-    color: var(--text-color);
+    color: var(--text-color); /* Correctly using var */
 }
 
-/* =============================== */
-/*         Hero Section            */
-/* =============================== */
+/* Hero Section */
 #hero {
     display: flex;
     align-items: center;
     gap: 30px;
     padding: 20px 0;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color); /* Correctly using var */
 }
 
 #hero img {
@@ -206,32 +200,26 @@ p {
     height: 160px;
     object-fit: cover;
     border-radius: 50%;
-    border: 2px solid var(--border-color);
-    transition: transform 0.2s ease, border-color 0.3s;
+    border: 2px solid var(--border-color); /* Correctly using var */
+    transition: transform 0.2s ease;
 }
 
 #hero img:hover {
     transform: scale(1.05);
 }
 
-.hero-text {
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.hero-text h2 {
+#hero-text h2 {
     font-size: 1.6em;
     margin: 0 0 10px;
-    color: var(--text-color);
+    color: var(--text-color); /* Ensure heading color changes */
 }
 
-.hero-text p {
+#hero-text p {
     font-size: 1em;
-    color: var(--text-color);
+    color: var(--text-color); /* Ensure paragraph color changes */
 }
 
-/* =============================== */
-/*       Projects Section          */
-/* =============================== */
+/* Projects Section */
 .projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -240,15 +228,15 @@ p {
 }
 
 .project-card {
-    background-color: var(--main-bg);
-    border: 1px solid var(--border-color);
+    background-color: var(--main-bg); /* Correctly using var */
+    border: 1px solid var(--border-color); /* Correctly using var */
     border-radius: 8px;
     padding: 20px;
     transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .project-card:hover {
-    box-shadow: var(--card-shadow);
+    box-shadow: var(--card-shadow); /* Correctly using var */
     transform: translateY(-5px);
 }
 
@@ -261,17 +249,15 @@ p {
 .project-card h3 {
     font-size: 1.4em;
     margin: 10px 0;
-    color: var(--text-color);
+    color: var(--text-color); /* Ensure heading color changes */
 }
 
 .project-card p {
     font-size: 1em;
-    color: var(--text-color);
+    color: var(--text-color); /* Ensure paragraph color changes */
 }
 
-/* =============================== */
-/*       Publications Section      */
-/* =============================== */
+/* Publication List Styles */
 .publication-group {
     margin-bottom: 40px;
 }
@@ -282,108 +268,104 @@ p {
 }
 
 .publication-list li {
-    background: linear-gradient(to bottom, var(--main-bg) 0%, var(--bg-color) 100%);
-    border: 1px solid var(--border-color);
+    background: linear-gradient(to bottom, var(--main-bg) 0%, var(--bg-color) 100%); /* Use vars for consistent gradient */
+    border: 1px solid var(--border-color); /* Correctly using var */
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 15px;
     transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
+/* REMOVE THIS, as the variables handle the change now */
+/* .dark-mode .publication-list li {
+    background: linear-gradient(to bottom, #252525 0%, #1e1e1e 100%);
+} */
+
 .publication-list li:hover {
-    box-shadow: var(--card-shadow);
+    box-shadow: var(--card-shadow); /* Correctly using var */
     transform: translateY(-3px);
 }
 
-/* =============================== */
-/*             Buttons             */
-/* =============================== */
-.button,
-.cta-button {
+/* Button Styles */
+.button {
     display: inline-block;
     padding: 10px 20px;
+    /* Use vars directly here to benefit from the .dark-mode override */
     background: linear-gradient(to bottom, var(--button-bg) 0%, var(--button-hover) 100%);
-    color: #fff;
+    color: #fff; /* White text for buttons usually remains constant */
     border-radius: 5px;
     text-decoration: none;
     transition: transform 0.2s ease, background 0.2s ease;
     margin-top: 10px;
-    box-shadow: 0 2px 5px var(--shadow-color);
+    box-shadow: 0 2px 5px var(--shadow-color); /* Correctly using var */
 }
 
-.button:hover,
-.cta-button:hover {
-    background: linear-gradient(to bottom, var(--button-hover) 0%, var(--button-bg) 100%);
+.button:hover {
+    background: linear-gradient(to bottom, var(--button-hover) 0%, var(--button-bg) 100%); /* Use vars directly here */
     transform: scale(1.05);
+    text-decoration: none;
 }
 
-.button:focus,
-.cta-button:focus {
-    outline: 2px solid var(--button-hover);
+.button:focus {
+    outline: 2px solid var(--button-hover); /* Correctly using var */
     outline-offset: 2px;
 }
 
-/* =============================== */
-/*            Footer               */
-/* =============================== */
-footer {
-    text-align: center;
-    margin-top: 50px;
-    padding: 20px 0;
-    background-color: var(--header-bg);
-    color: var(--text-color);
-    font-size: 0.9em;
-    border-top: 1px solid var(--border-color);
-}
-
-/* =============================== */
-/*         Global Links            */
-/* =============================== */
+/* General Link Styles */
 a {
-    color: var(--link-color);
+    color: var(--link-color); /* Correctly using var */
     text-decoration: none;
 }
 
 a:hover {
-    color: var(--link-hover);
+    color: var(--link-hover); /* Correctly using var */
     text-decoration: underline;
 }
 
 a:focus {
-    outline: 2px solid var(--link-hover);
+    outline: 2px solid var(--link-hover); /* Correctly using var */
     outline-offset: 2px;
 }
 
-/* =============================== */
-/*        Responsive Design        */
-/* =============================== */
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px 0;
+    background-color: var(--header-bg); /* Correctly using var */
+    color: var(--text-color); /* Correctly using var */
+    font-size: 0.9em;
+    border-top: 1px solid var(--border-color); /* Correctly using var */
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     body {
         margin: 20px;
     }
-
     header {
         padding: 20px 0;
     }
-
     header h1 {
         font-size: 1.8em;
     }
 
+    /* Mobile Navigation Specifics */
     nav ul {
-        display: block;
+        /* Start hidden and transition height for a smooth reveal */
+        display: block; /* Change from none to block so transition works */
         max-height: 0;
         overflow: hidden;
-        background-color: var(--header-bg);
-        padding: 0 20px;
+        background-color: var(--header-bg); /* Correctly using var */
+        padding: 0 20px; /* Adjust padding for closed state */
         text-align: center;
-        border-top: 1px solid var(--border-color);
-        transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+        border-top: 1px solid var(--border-color); /* Correctly using var */
+        transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out; /* Add padding to transition */
     }
 
     nav ul.active {
-        max-height: 500px;
-        padding: 20px;
+        max-height: 500px; /* Sufficient height to show all links */
+        padding: 20px; /* Padding for open state */
     }
 
     nav ul li {
@@ -397,32 +379,31 @@ a:focus {
         display: block;
     }
 
+    /* Ensure nav-toggle is visible on mobile */
     .nav-toggle {
         display: block;
     }
 
+    .theme-toggle {
+        right: 20px;
+    }
     main {
         padding: 20px;
     }
-
     h2 {
         font-size: 1.5em;
     }
-
     h3 {
         font-size: 1.3em;
     }
-
     #hero {
         flex-direction: column;
         text-align: center;
     }
-
     #hero img {
         width: 120px;
         height: 120px;
     }
-
     .projects {
         grid-template-columns: 1fr;
     }
@@ -432,16 +413,15 @@ a:focus {
     header h1 {
         font-size: 2.8em;
     }
-
+    /* Ensure navigation is displayed for desktop */
     nav ul {
         display: block;
-        max-height: initial;
-        overflow: visible;
-        padding: 0;
-        border-top: none;
+        max-height: initial; /* Override max-height from mobile styles */
+        overflow: visible; /* Override overflow from mobile styles */
+        padding: 0; /* Reset padding for desktop */
+        border-top: none; /* Remove border-top for desktop */
     }
-
     .nav-toggle {
-        display: none;
+        display: none; /* Hide toggle button on desktop */
     }
 }
