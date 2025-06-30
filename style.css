@@ -43,7 +43,7 @@ body {
     margin: 40px;
     line-height: 1.8;
     color: var(--text-color);
-    background: linear-gradient(to bottom, var(--bg-color) 0%, #f5f5f5 100%);
+    background: linear-gradient(to bottom, var(--bg-color) 0%, var(--main-bg) 100%);
     transition: background 0.3s ease, color 0.3s ease;
 }
 
@@ -214,20 +214,17 @@ p {
     transform: scale(1.05);
 }
 
-.hero-text,
-#hero-text {
+.hero-text {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.hero-text h2,
-#hero-text h2 {
+.hero-text h2 {
     font-size: 1.6em;
     margin: 0 0 10px;
     color: var(--text-color);
 }
 
-.hero-text p,
-#hero-text p {
+.hero-text p {
     font-size: 1em;
     color: var(--text-color);
 }
@@ -285,16 +282,12 @@ p {
 }
 
 .publication-list li {
-    background: linear-gradient(to bottom, var(--main-bg) 0%, #f5f5f5 100%);
+    background: linear-gradient(to bottom, var(--main-bg) 0%, var(--bg-color) 100%);
     border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 15px;
     transition: box-shadow 0.2s ease, transform 0.2s ease;
-}
-
-.dark-mode .publication-list li {
-    background: linear-gradient(to bottom, #252525 0%, #1e1e1e 100%);
 }
 
 .publication-list li:hover {
@@ -309,7 +302,7 @@ p {
 .cta-button {
     display: inline-block;
     padding: 10px 20px;
-    background: linear-gradient(to bottom, var(--button-bg) 0%, #002a6b 100%);
+    background: linear-gradient(to bottom, var(--button-bg) 0%, var(--button-hover) 100%);
     color: #fff;
     border-radius: 5px;
     text-decoration: none;
@@ -320,7 +313,7 @@ p {
 
 .button:hover,
 .cta-button:hover {
-    background: linear-gradient(to bottom, var(--button-hover) 0%, #003c8f 100%);
+    background: linear-gradient(to bottom, var(--button-hover) 0%, var(--button-bg) 100%);
     transform: scale(1.05);
 }
 
@@ -328,6 +321,19 @@ p {
 .cta-button:focus {
     outline: 2px solid var(--button-hover);
     outline-offset: 2px;
+}
+
+/* =============================== */
+/*            Footer               */
+/* =============================== */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px 0;
+    background-color: var(--header-bg);
+    color: var(--text-color);
+    font-size: 0.9em;
+    border-top: 1px solid var(--border-color);
 }
 
 /* =============================== */
@@ -346,19 +352,6 @@ a:hover {
 a:focus {
     outline: 2px solid var(--link-hover);
     outline-offset: 2px;
-}
-
-/* =============================== */
-/*            Footer               */
-/* =============================== */
-footer {
-    text-align: center;
-    margin-top: 50px;
-    padding: 20px 0;
-    background-color: var(--header-bg);
-    color: var(--text-color);
-    font-size: 0.9em;
-    border-top: 1px solid var(--border-color);
 }
 
 /* =============================== */
