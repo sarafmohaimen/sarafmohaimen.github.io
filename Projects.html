@@ -6,26 +6,25 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-XDLQ8RS51Q');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Saraf Mohaimen Chowdhury</title> <link rel="stylesheet" href="style.css">
+    <title>Projects - Saraf Mohaimen Chowdhury</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>Saraf Mohaimen Chowdhury</h1>
-        <button class="theme-toggle" aria-label="Toggle dark mode">
-            ☀️ </button>
-        <button class="nav-toggle" aria-label="Toggle navigation">
-            ☰ </button>
+        <p class="header-subtitle">Researcher in Quantum Materials and Nanotechnology</p>
+        <button class="theme-toggle" aria-label="Toggle dark mode">☀️</button>
+        <button class="nav-toggle" aria-label="Toggle navigation">Menu ☰</button>
         <nav role="navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Overview.html">Overview</a></li>
                 <li><a href="Publications.html">Publications</a></li>
-                <li><a href="Projects.html">Projects</a></li>
+                <li><a href="Projects.html" aria-current="page">Projects</a></li>
                 <li><a href="ToolsNSoft.html">Tools & Software</a></li>
                 <li><a href="Connections.html">Profiles</a></li>
             </ul>
@@ -35,23 +34,24 @@
     <main>
         <section id="projects">
             <h2>Projects</h2>
-            <ul>
-                <li>
-                    <p>Absorption/Emission Spectrum of a Colloidal Quantum Dots: An FEM Investigation with Ansys Lumerical</p>
+            <ul class="projects publication-list">
+                <li class="project-card">
+                    <h3>Absorption/Emission Spectrum of a Colloidal Quantum Dots: An FEM Investigation with Ansys Lumerical</h3>
                 </li>
-                <li>
-                    <p>Analytical Solutions of the Pauli–Fierz Hamiltonian for a Two-Level System in a Single-Mode Cavity</p>
+                <li class="project-card">
+                    <h3>Analytical Solutions of the Pauli–Fierz Hamiltonian for a Two-Level System in a Single-Mode Cavity</h3>
                 </li>
-                <li>
-                    <p>Predicting Solution of Single-Soliton using Bilinear Neural Network</p>
-                    <em>Salena Akther, Saraf Mohaimen</em>
+                <li class="project-card">
+                    <h3>Predicting Solution of Single-Soliton using Bilinear Neural Network</h3>
+                    <p><em>Salena Akther, Saraf Mohaimen</em></p>
                 </li>
             </ul>
+            <a href="ToolsNSoft.html" class="button" aria-label="View tools and software used in projects">Tools & Software</a>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Saraf Mohaimen Chowdhury</p>
+        <p>© 2025 Saraf Mohaimen Chowdhury</p>
     </footer>
 
     <script>
@@ -66,21 +66,17 @@
                 });
             }
 
-            // Theme Toggle (if you have one in your CSS and want to make it functional)
+            // Theme Toggle
             const themeToggle = document.querySelector('.theme-toggle');
             if (themeToggle) {
                 themeToggle.addEventListener('click', function() {
                     document.body.classList.toggle('dark-mode');
-                    // Optional: Save user preference to localStorage
-                    if (document.body.classList.contains('dark-mode')) {
-                        localStorage.setItem('theme', 'dark');
-                    } else {
-                        localStorage.setItem('theme', 'light');
-                    }
+                    themeToggle.textContent = document.body.classList.contains('dark-mode') ? '🌙' : '☀️';
+                    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
                 });
-                // Optional: Apply saved theme on load
                 if (localStorage.getItem('theme') === 'dark') {
                     document.body.classList.add('dark-mode');
+                    themeToggle.textContent = '🌙';
                 }
             }
         });
