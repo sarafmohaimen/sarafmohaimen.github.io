@@ -6,7 +6,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-XDLQ8RS51Q');
     </script>
     <meta charset="UTF-8">
@@ -17,15 +16,12 @@
 <body>
     <header>
         <h1>Saraf Mohaimen Chowdhury</h1>
-        <button class="theme-toggle" aria-label="Toggle dark mode">
-            ☀️
-        </button>
-        <button class="nav-toggle" aria-label="Toggle navigation">
-            Menu ☰
-        </button>
+        <p class="header-subtitle">Researcher in Quantum Materials and Nanotechnology</p>
+        <button class="theme-toggle" aria-label="Toggle dark mode">☀️</button>
+        <button class="nav-toggle" aria-label="Toggle navigation">Menu ☰</button>
         <nav role="navigation">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" aria-current="page">Home</a></li>
                 <li><a href="Overview.html">Overview</a></li>
                 <li><a href="Publications.html">Publications</a></li>
                 <li><a href="Projects.html">Projects</a></li>
@@ -37,19 +33,20 @@
 
     <main>
         <section id="hero" class="hero-container">
-            <div class="hero-image">
-                <img src="profile.jpg" alt="Profile Picture">
-            </div>
+            <figure class="hero-image">
+                <img src="profile.jpg" alt="Profile picture of Saraf Mohaimen Chowdhury">
+            </figure>
             <div class="hero-text">
                 <h2>Welcome!</h2>
                 <p>This is my personal academic website where you can find information about my research, publications, and projects.</p>
-                <a href="https://orcid.org/0009-0006-7351-4573" class="cta-button">Orcid Profile</a>
+                <a href="https://orcid.org/0009-0006-7351-4573" class="cta-button" target="_blank" aria-label="Visit Saraf Mohaimen Chowdhury's Orcid Profile">Orcid Profile</a>
+                <a href="Publications.html" class="cta-button" aria-label="View publications">View Publications</a>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Saraf Mohaimen Chowdhury</p>
+        <p>© 2025 Saraf Mohaimen Chowdhury</p>
     </footer>
 
     <script>
@@ -64,21 +61,17 @@
                 });
             }
 
-            // Theme Toggle (if you have one in your CSS and want to make it functional)
+            // Theme Toggle
             const themeToggle = document.querySelector('.theme-toggle');
             if (themeToggle) {
                 themeToggle.addEventListener('click', function() {
                     document.body.classList.toggle('dark-mode');
-                    // Optional: Save user preference to localStorage
-                    if (document.body.classList.contains('dark-mode')) {
-                        localStorage.setItem('theme', 'dark');
-                    } else {
-                        localStorage.setItem('theme', 'light');
-                    }
+                    themeToggle.textContent = document.body.classList.contains('dark-mode') ? '🌙' : '☀️';
+                    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
                 });
-                // Optional: Apply saved theme on load
                 if (localStorage.getItem('theme') === 'dark') {
                     document.body.classList.add('dark-mode');
+                    themeToggle.textContent = '🌙';
                 }
             }
         });
