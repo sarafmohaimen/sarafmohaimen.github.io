@@ -6,7 +6,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-XDLQ8RS51Q');
     </script>
     <meta charset="UTF-8">
@@ -17,17 +16,16 @@
 <body>
     <header>
         <h1>Saraf Mohaimen Chowdhury</h1>
-        <button class="theme-toggle" aria-label="Toggle dark mode">
-            ☀️ </button>
-        <button class="nav-toggle" aria-label="Toggle navigation">
-            ☰ </button>
+        <p class="header-subtitle">Researcher in Quantum Materials and Nanotechnology</p>
+        <button class="theme-toggle" aria-label="Toggle dark mode">☀️</button>
+        <button class="nav-toggle" aria-label="Toggle navigation">Menu ☰</button>
         <nav role="navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Overview.html">Overview</a></li>
                 <li><a href="Publications.html">Publications</a></li>
                 <li><a href="Projects.html">Projects</a></li>
-                <li><a href="ToolsNSoft.html">Tools & Software</a></li>
+                <li><a href="ToolsNSoft.html" aria-current="page">Tools & Software</a></li>
                 <li><a href="Connections.html">Profiles</a></li>
             </ul>
         </nav>
@@ -36,56 +34,40 @@
     <main>
         <section id="tools">
             <h2>Tools & Software I Use</h2>
-            <p>
-                I use a mix of computational programs, post-processing tools, and visualization software to explore nanoscale systems.
-            </p>
-            <ul>
+            <p>I use a mix of computational programs, post-processing tools, and visualization software to explore nanoscale systems.</p>
+            <ul class="publication-list">
                 <li>
-                    <strong>DFT Packages I Frequently Use:</strong>
-                    <br>
-                    <em>Gaussian, PySCF, DMol3</em>
-                    <br>
-                    Used for non-periodic systems, structural optimization, spin-resolved properties, and wavefunction analysis in nanoflakes and quantum dots.
+                    <strong>DFT Packages</strong>
+                    <p><em>Gaussian, PySCF, DMol3</em><br>Used for non-periodic systems, structural optimization, spin-resolved properties, and wavefunction analysis in nanoflakes and quantum dots.</p>
                 </li>
                 <li>
-                    <strong>Other conventional programs that I have worked with:</strong>
-                    <br>
-                    <em>VASP, Quantum ESPRESSO</em>
-                    <br>
-                    Primarily adopted for studying periodic structures and their non-colinear spin texture.
+                    <strong>Periodic Structure Simulations</strong>
+                    <p><em>VASP, Quantum ESPRESSO</em><br>Adopted for studying periodic structures and their non-collinear spin texture.</p>
                 </li>
                 <li>
-                    <strong>Quantum Transport Simulations:</strong>
-                    <br>
-                    <em>TranSIESTA, NEGF formalism</em>
-                    <br>
-                    Used to investigate charge/spin transport in nanoelectronic and spintronic devices. NEGF-based tools help model current–voltage characteristics under quantum coherent conditions.
+                    <strong>Quantum Transport Simulations</strong>
+                    <p><em>TranSIESTA, NEGF formalism</em><br>Used to investigate charge/spin transport in nanoelectronic and spintronic devices, modeling current–voltage characteristics under quantum coherent conditions.</p>
                 </li>
                 <li>
-                    <strong>Visualization & Data Analysis:</strong>
-                    <br>
-                    <em>GaussView, Multiwfn, VESTA, Pymatgen, GaussSum</em>
-                    <br>
-                    For visualizing molecular orbitals, DOS, spin densities, charge densities, and crystal structures.
+                    <strong>Visualization & Data Analysis</strong>
+                    <p><em>GaussView, Multiwfn, VESTA, Pymatgen, GaussSum</em><br>For visualizing molecular orbitals, DOS, spin density, charge density, and crystal structures.</p>
                 </li>
                 <li>
-                    <strong>Programming & Scripting:</strong>
-                    <br>
-                    <em>Python (NumPy, SciPy, Matplotlib, ASE), Julia</em>
-                    <br>
-                    Used for data extraction, plotting, and scripting parameter sweeps.
+                    <strong>Programming & Scripting</strong>
+                    <p><em>Python (NumPy, SciPy, Matplotlib, ASE), Julia</em><br>Used for data extraction, plotting, and scripting parameter sweeps.</p>
+                    <a href="https://github.com" class="button" target="_blank" aria-label="View my code repositories on GitHub">View My Code</a>
                 </li>
                 <li>
-                    <strong>Other tools I find useful:</strong><br>
-                    KWANT: For quantum transport calculations with tight-binding approach<br>
-                    VAMPIRE: For atomistic spin dynamics with Landau-Lifshitz-Gilbert, and Metropolis (MC) algorithm<br>
+                    <strong>Specialized Tools</strong>
+                    <p><em>KWANT</em>: For quantum transport calculations with tight-binding approach<br><em>VAMPIRE</em>: For atomistic spin dynamics with Landau-Lifshitz-Gilbert and Metropolis (MC) algorithms.</p>
                 </li>
             </ul>
+            <a href="Projects.html" class="button" aria-label="View projects using these tools">See My Projects</a>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Saraf Mohaimen Chowdhury</p>
+        <p>© 2025 Saraf Mohaimen Chowdhury</p>
     </footer>
 
     <script>
@@ -100,21 +82,17 @@
                 });
             }
 
-            // Theme Toggle (if you have one in your CSS and want to make it functional)
+            // Theme Toggle
             const themeToggle = document.querySelector('.theme-toggle');
             if (themeToggle) {
                 themeToggle.addEventListener('click', function() {
                     document.body.classList.toggle('dark-mode');
-                    // Optional: Save user preference to localStorage
-                    if (document.body.classList.contains('dark-mode')) {
-                        localStorage.setItem('theme', 'dark');
-                    } else {
-                        localStorage.setItem('theme', 'light');
-                    }
+                    themeToggle.textContent = document.body.classList.contains('dark-mode') ? '🌙' : '☀️';
+                    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
                 });
-                // Optional: Apply saved theme on load
                 if (localStorage.getItem('theme') === 'dark') {
                     document.body.classList.add('dark-mode');
+                    themeToggle.textContent = '🌙';
                 }
             }
         });
