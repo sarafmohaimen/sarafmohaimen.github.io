@@ -53,6 +53,36 @@
             line-height: 1;
             top: 0;
         }
+
+        .cta-button {
+            display: block;
+            width: fit-content;
+            margin: 1.5rem auto 0;
+            padding: 0.75rem 1.5rem;
+            background-color: #003366;
+            color: white;
+            text-decoration: none;
+            border-radius: 0.3rem;
+            font-size: 1rem;
+            font-weight: 500;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #002244;
+            transform: translateY(-2px);
+        }
+
+        .cta-button:focus {
+            outline: 2px solid #0077cc;
+            outline-offset: 2px;
+        }
+
+        .dark-mode .cta-button {
+            background-color: #4da8ff;
+            color: #1a1a1a;
+        }
     </style>
 </head>
 <body>
@@ -76,13 +106,11 @@
     <main>
         <section id="hero" class="hero-container">
             <figure class="hero-image">
-                <img src="IMG_9350.JPG" alt="Profile picture of Saraf Mohaimen Chowdhury">
+                <img src="IMG_9350.JPG" alt="Profile picture of Saraf Mohaimen Chowdhury" loading="lazy">
             </figure>
             <div class="hero-text">
                 <h2>Welcome!</h2>
                 <p>This is my personal academic website where you can find information about my research, publications, and projects.</p>
-                <a href="Overview.html" class="cta-button" aria-label="Learn more about Saraf Mohaimen Chowdhury">Learn More</a>
-
                 <div class="milestone-block">
                     <h3>📌 Recent Milestones</h3>
                     <ul class="milestone-list">
@@ -91,6 +119,7 @@
                         <li><strong>Feb 2025:</strong> Joined collaborative study on magnetization control in nanoscale semiconductors.</li>
                     </ul>
                 </div>
+                <a href="Overview.html" class="cta-button" aria-label="Learn more about Saraf Mohaimen Chowdhury">Learn More</a>
             </div>
         </section>
     </main>
