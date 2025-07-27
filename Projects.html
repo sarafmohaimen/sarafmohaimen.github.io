@@ -10,10 +10,14 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Undergraduate research projects by Saraf Mohaimen Chowdhury in quantum materials and nanoelectronics.">
+    <meta name="keywords" content="quantum materials, nanoelectronics, research projects, Saraf Mohaimen Chowdhury">
     <title>Projects - Saraf Mohaimen Chowdhury</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a href="#projects" class="skip-link">Skip to content</a>
     <header>
         <h1>Saraf Mohaimen Chowdhury</h1>
         <p class="header-subtitle">Researcher in Quantum Materials and Nanoelectronics</p>
@@ -31,39 +35,44 @@
         </nav>
     </header>
 
-    <main>
+    <main role="main">
         <section id="projects">
-            <h2>Projects</h2>
-            <ul class="projects publication-list">
-                <li class="project-card">
-                    <h3>Absorption/Emission Spectrum of a Colloidal Quantum Dots: An FEM Investigation with Ansys Lumerical</h3>
-                </li>
-                <li class="project-card">
-                    <h3>Analytical Solutions of the Pauli–Fierz Hamiltonian for a Two-Level System in a Single-Mode Cavity</h3>
-                </li>
-                <li class="project-card">
-                    <h3>Predicting Solution of Single-Soliton using Bilinear Neural Network</h3>
-                    <p><em>Salena Akther, Saraf Mohaimen</em></p>
-                </li>
+            <h2>Undergraduate Research Projects</h2>
+            <p>
+                The following is a list of unpublished project works carried out during my undergraduate studies as part of coursework, lab assignments, or personal curiosity.
+            </p>
+            <ul class="publication-list">
+                <li>Predicting Single-Soliton Solutions Using a Bilinear Neural Network</li>
+                <li>Absorption and Emission Spectra of Colloidal Quantum Dots: A Finite Element Study with Ansys Lumerical</li>
+                <li>Analytical Solutions of the Pauli–Fierz Hamiltonian for a Two-Level System in a Single-Mode Cavity Using Julia</li>
+                <li>Wavefunction Polarization in a Circular Quantum Dot Using the Schrödinger–Poisson Model in COMSOL</li>
+                <li>Designing a Patch Antenna for Wideband Communication with CST Studio</li>
+                <li>Optimal Channel Encoding/Decoding Algorithm Design in MATLAB</li>
+                <li>Data Compression and Image Processing Techniques in MATLAB</li>
+                <li>Design and Simulation of CMOS Logic Gates Using Microwind</li>
             </ul>
-            <a href="ToolsNSoft.html" class="button" aria-label="View tools and software used in projects">Tools & Software</a>
         </section>
     </main>
 
     <footer>
-        <p>© 2025 Saraf Mohaimen Chowdhury</p>
+        <p>© <span id="current-year"></span> Saraf Mohaimen Chowdhury</p>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Set dynamic year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
             // Mobile Navigation Toggle
             const navToggle = document.querySelector('.nav-toggle');
             const navUl = document.querySelector('nav ul');
-
             if (navToggle && navUl) {
                 navToggle.addEventListener('click', function() {
                     navUl.classList.toggle('active');
+                    navToggle.textContent = navUl.classList.contains('active') ? 'Close ✕' : 'Menu ☰';
                 });
+            } else {
+                console.warn('Navigation toggle or menu not found');
             }
 
             // Theme Toggle
@@ -78,6 +87,8 @@
                     document.body.classList.add('dark-mode');
                     themeToggle.textContent = '🌙';
                 }
+            } else {
+                console.warn('Theme toggle not found');
             }
         });
     </script>
