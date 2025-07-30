@@ -10,103 +10,8 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My Academic Website</title>
+    <title>Tools & Software I Use - Saraf Mohaimen Chowdhury</title>
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        .milestone-block {
-            background-color: #f8f9fa;
-            border-left: 4px solid #0077cc;
-            padding: 1rem 1.25rem;
-            margin-top: 1.5rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-            font-size: 0.95rem;
-        }
-
-        .milestone-block h3 {
-            margin-top: 0;
-            margin-bottom: 0.75rem;
-            font-size: 1.1rem;
-            color: #003366;
-        }
-
-        .milestone-list {
-            list-style-type: none;
-            padding-left: 0;
-            margin: 0;
-        }
-
-        .milestone-list li {
-            margin-bottom: 0.5rem;
-            padding-left: 1.2rem;
-            position: relative;
-            line-height: 1.4;
-            transition: background-color 0.3s ease;
-        }
-
-        .milestone-list li:hover {
-            background-color: #e6f0ff;
-        }
-
-        .dark-mode .milestone-list li:hover {
-            background-color: #3a3a3a;
-        }
-
-        .milestone-list li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #0077cc;
-            font-size: 1.2rem;
-            line-height: 1;
-            top: 0;
-        }
-
-        .cta-button {
-            display: block;
-            width: fit-content;
-            margin: 1.5rem auto 0;
-            padding: 0.75rem 1.5rem;
-            background-color: #003366;
-            color: white;
-            text-decoration: none;
-            border-radius: 0.3rem;
-            font-size: 1rem;
-            font-weight: 500;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s ease, background-color 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background-color: #002244;
-            transform: translateY(-2px);
-        }
-
-        .cta-button:focus {
-            outline: 2px solid #0077cc;
-            outline-offset: 2px;
-        }
-
-        .dark-mode .cta-button {
-            background-color: #4da8ff;
-            color: #1a1a1a;
-        }
-
-        .dark-mode .milestone-block {
-            background-color: #2a2a2a;
-            border-left-color: #4da8ff;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-        }
-
-        .dark-mode .milestone-block h3 {
-            color: #e0e0e0;
-        }
-
-        .dark-mode .milestone-list li::before {
-            color: #4da8ff;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -116,33 +21,46 @@
         <button class="nav-toggle" aria-label="Toggle navigation">Menu ☰</button>
         <nav role="navigation">
             <ul>
-                <li><a href="about">Home</a></li>
-                <li><a href="overview">Overview</a></li>
-                <li><a href="publications">Publications</a></li>
-                <li><a href="projects">Projects</a></li>
-                <li><a href="Tools & Software">Tools & Software</a></li>
-                <li><a href="profiles">Profiles</a></li>
+                <li><a href="/">Home</a></li> 
+                <li><a href="/overview/">Overview</a></li>
+                <li><a href="/publications/">Publications</a></li>
+                <li><a href="/projects/">Projects</a></li>
+                <li><a href="/Tools & Software/">Tools & Software</a></li> 
+                <li><a href="/profiles/">Profiles</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="hero" class="hero-container">
-            <figure class="hero-image">
-                <img src="IMG_9350.JPG" alt="Profile picture of Saraf Mohaimen Chowdhury" loading="lazy">
-            </figure>
-            <div class="hero-text">
-                <h2>Welcome!</h2>
-                <p>This is my personal academic website where you can find information about my research, publications, and projects.</p>
-                <div class="milestone-block">
-                    <h3>📌 Selected Contributions</h3>
-                    <ul class="milestone-list">
-                        <li><strong>May 2025:</strong> Submitted first manuscript on proximal magnetic moments and electronic concentration in quantum dots.</li>
-                        <li><strong>July 2025:</strong> Submitted second manuscript on spin-selective wavefunction manipulation in quantum dots.</li>
-                    </ul>
-                </div>
-                <a href="overview" class="cta-button" aria-label="Learn more about Saraf Mohaimen Chowdhury">Learn More</a>
-            </div>
+        <section id="tools">
+            <h2>Tools & Software I Use</h2>
+            <p>I use a mix of computational programs, post-processing tools, and visualization software to explore nanoscale systems.</p>
+            <ul class="publication-list">
+                <li>
+                    <strong>DFT Packages</strong>
+                    <p><em>Gaussian, PySCF, DMol3</em><br>Used for non-periodic systems, structural optimization, spin-resolved properties, and wavefunction analysis in nanoflakes and quantum dots.</p>
+                </li>
+                <li>
+                    <strong>Periodic Structure Simulations</strong>
+                    <p><em>VASP, Quantum ESPRESSO</em><br>Adopted for studying periodic structures and their non-collinear spin texture.</p>
+                </li>
+                <li>
+                    <strong>Quantum Transport Simulations</strong>
+                    <p><em>TranSIESTA, NEGF formalism</em><br>Used to investigate charge/spin transport in nanoelectronic and spintronic devices, modeling current–voltage characteristics under quantum coherent conditions.</p>
+                </li>
+                <li>
+                    <strong>Visualization & Data Analysis</strong>
+                    <p><em>GaussView, Multiwfn, VESTA, Pymatgen, GaussSum</em><br>For visualizing molecular orbitals, DOS, spin density, charge density, and crystal structures.</p>
+                </li>
+                <li>
+                    <strong>Programming & Scripting</strong>
+                    <p><em>Python (NumPy, SciPy, Matplotlib, ASE), Julia</em><br>Used for data extraction, plotting, and scripting parameter sweeps.</p>
+                </li>
+                <li>
+                    <strong>Other tools I find useful</strong>
+                    <p><em>KWANT</em>: For quantum transport calculations with tight-binding approach<br><em>VAMPIRE</em>: For atomistic spin dynamics with Landau-Lifshitz-Gilbert and Metropolis (MC) algorithms.</p>
+                </li>
+            </ul>
         </section>
     </main>
 
