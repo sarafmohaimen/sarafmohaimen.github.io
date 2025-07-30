@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XDLQ8RS51Q"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XDLQ8RS51Q');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview - Saraf Mohaimen Chowdhury</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Saraf Mohaimen Chowdhury</h1>
+        <p class="header-subtitle">Researcher in Quantum Materials and Nanoelectronics</p>
+        <button class="theme-toggle" aria-label="Toggle dark mode">☀️</button>
+        <button class="nav-toggle" aria-label="Toggle navigation">Menu ☰</button>
+        <nav role="navigation">
+            <ul>
+                <li><a href="about">Home</a></li>
+                <li><a href="overview">Overview</a></li>
+                <li><a href="publications">Publications</a></li>
+                <li><a href="projects">Projects</a></li>
+                <li><a href="Tools & Software">Tools & Software</a></li>
+                <li><a href="profiles">Profiles</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I'm Saraf Mohaimen Chowdhury, an early career researcher passionate about quantum materials and nanoscale phenomena. My work is primarily focused on understanding the physical properties of nanomaterials by using first-principles calculations and exploring how small structures like atomically thin layers, can lead to new opportunities in electronics, photonics, and information technologies. In particular, I'm interested in how spins, light, and topology are interconnected at the subatomic level, and how we can harness these aspects for future technologies.</p>
+        </section>
+
+        <section id="research-interests">
+            <h2>Research Interests</h2>
+            <p>I enjoy how studying the tiny fragments of the universe can expose the deeper workings of nature. My research focuses on the properties and applications of low-dimensional quantum materials. I am particularly interested in:</p>
+            <ul class="publication-list">
+                <li>Spin-Dynamics in Low-dimensional materials (2D monolayers, quantum dots, TM-based compounds)</li>
+                <li>Density Functional Theory (DFT) and various computational physics</li>
+                <li>Doping, defects, and surface effects in semiconductor nanoflakes</li>
+                <li>Topological behavior of materials</li>
+                <li>Spin-resolved quantum transport and spintronic device modeling</li>
+                <li>Cavity Quantum Electrodynamics</li>
+            </ul>
+        </section>
+
+        <section id="books">
+            <h2>Academic Books That Influenced Me</h2>
+            <ul class="publication-list">
+                <li>
+                    <cite><em>Molecular Quantum Mechanics</em> – Atkins & Friedman</cite>
+                    <p><small>This text helped me build a foundational understanding of atomic-level interactions, their interpretations, and the conceptual basis of various approximation theories.</small></p>
+                </li>
+                <li>
+                    <cite><em>Quantum Transport: Atom to Transistor</em> – Supriyo Datta</cite>
+                    <p><small>I have tried to learn NEGF theory from this book. Although dated, I chose it for its simpler but precise explanations, many figures, and intuitive approach to describe transport properties.</small></p>
+                </li>
+                <li>
+                    <cite><em>Topological Quantum Materials: Concepts, Models, and Phenomena</em> – Grigory Tkachov</cite>
+                    <p><small>I found this book very effective for self-study because the author creates an intuitive scenario before starting any detailed explanation. So, in my opinion, if anyone has the least understandings of general concepts like invariants, band inversion mechanisms, and Berry curvature; then it's a very good book to learn about topological insulators, transport theory in disordered materials, and the origin of Majorana zero modes from very scratch.</small></p>
+                </li>
+                <li>
+                    <cite><em>Quantum Field Theory for the Gifted Amateur</em> – Lancaster & Blundell</cite>
+                    <p><small>Started just to pass the time during a major power blackout when my phones were dead, I was deeply amazed at how such intricate concepts could be explained in a conversational narrative. Topics like propagators, statistical mechanics, Klein-Gordon equations, and cavity dynamics were the major parts I mostly covered.</small></p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="literatures">
+            <h2>Scientific Literatures That Shaped My Thinking</h2>
+            <ul class="publication-list">
+                <li>
+                    <cite><em>Jiang, Xue, et al. "Recent progress on 2D magnets: Fundamental mechanism, structural design and modification." Applied Physics Reviews 8.3 (2021).</em>, Phys. Rev. (2010)</cite>
+                    <p><small>Helped me to understand the characterization of intrinsic magnetism and defect-induced magnetizations.</small></p>
+                <li>
+                <li>
+                    <cite><em>De Bernardis, Daniele, Alberto Mercurio, and Simone De Liberato. "Tutorial on nonperturbative cavity quantum electrodynamics: is the Jaynes–Cummings model still relevant?." Journal of the Optical Society of America B 41.8 (2024): C206-C221.</em></cite>
+                    <p><small>Although currently I don't have sufficient expertise, this literature makes me very curious to study spin-photon coupling with QED-DFT based approach.</small></p>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Saraf Mohaimen Chowdhury</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Navigation Toggle
+            const navToggle = document.querySelector('.nav-toggle');
+            const navUl = document.querySelector('nav ul');
+
+            if (navToggle && navUl) {
+                navToggle.addEventListener('click', function() {
+                    navUl.classList.toggle('active');
+                });
+            }
+
+            // Theme Toggle
+            const themeToggle = document.querySelector('.theme-toggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', function() {
+                    document.body.classList.toggle('dark-mode');
+                    themeToggle.textContent = document.body.classList.contains('dark-mode') ? '🌙' : '☀️';
+                    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+                });
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.body.classList.add('dark-mode');
+                    themeToggle.textContent = '🌙';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
