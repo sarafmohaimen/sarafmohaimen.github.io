@@ -1,5 +1,5 @@
 /* =============================== */
-/*        Light/Dark Variables     */
+/* Light/Dark Variables     */
 /* =============================== */
 :root {
     --bg-color: #fdfdfd;
@@ -30,7 +30,7 @@
 }
 
 /* =============================== */
-/*          Base Styles            */
+/* Base Styles             */
 /* =============================== */
 * {
     box-sizing: border-box;
@@ -48,7 +48,7 @@ body {
 }
 
 /* =============================== */
-/*           Header                */
+/* Header                 */
 /* =============================== */
 header {
     background-color: var(--header-bg);
@@ -69,7 +69,7 @@ header h1 {
 }
 
 /* =============================== */
-/*          Navigation             */
+/* Navigation             */
 /* =============================== */
 nav[role="navigation"] {
     margin-top: 20px;
@@ -106,7 +106,7 @@ nav a:focus {
 }
 
 /* =============================== */
-/*       Theme Toggle Buttons      */
+/* Theme Toggle Buttons     */
 /* =============================== */
 .theme-toggle,
 .nav-toggle {
@@ -141,7 +141,7 @@ nav a:focus {
 }
 
 /* =============================== */
-/*             Main               */
+/* Main                   */
 /* =============================== */
 main {
     max-width: 900px;
@@ -154,7 +154,7 @@ main {
 }
 
 /* =============================== */
-/*           Sections              */
+/* Sections               */
 /* =============================== */
 section {
     margin-bottom: 60px;
@@ -191,7 +191,7 @@ p {
 }
 
 /* =============================== */
-/*         Hero Section            */
+/* Hero Section           */
 /* =============================== */
 #hero {
     display: flex;
@@ -230,7 +230,7 @@ p {
 }
 
 /* =============================== */
-/*       Projects Section          */
+/* Projects Section         */
 /* =============================== */
 .projects {
     display: grid;
@@ -270,7 +270,7 @@ p {
 }
 
 /* =============================== */
-/*       Publications Section      */
+/* Publications Section     */
 /* =============================== */
 .publication-group {
     margin-bottom: 40px;
@@ -296,7 +296,7 @@ p {
 }
 
 /* =============================== */
-/*             Buttons             */
+/* Buttons                */
 /* =============================== */
 .button,
 .cta-button {
@@ -324,7 +324,7 @@ p {
 }
 
 /* =============================== */
-/*            Footer               */
+/* Footer                */
 /* =============================== */
 footer {
     text-align: center;
@@ -337,7 +337,7 @@ footer {
 }
 
 /* =============================== */
-/*         Global Links            */
+/* Global Links           */
 /* =============================== */
 a {
     color: var(--link-color);
@@ -355,7 +355,23 @@ a:focus {
 }
 
 /* =============================== */
-/*        Responsive Design        */
+/* Custom Bullet Points       */
+/* =============================== */
+#retrospective ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#retrospective li::before {
+    content: "🔸";
+    color: var(--link-color);
+    display: inline-block;
+    width: 1.5em;
+    margin-left: -1.5em;
+}
+
+/* =============================== */
+/* Responsive Design       */
 /* =============================== */
 @media (max-width: 768px) {
     body {
