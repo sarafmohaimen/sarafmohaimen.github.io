@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XDLQ8RS51Q"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XDLQ8RS51Q');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connections - Saraf Mohaimen Chowdhury</title>
+    <title>Retrospective - Saraf Mohaimen Chowdhury</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,7 +18,7 @@
         <h1>Saraf Mohaimen Chowdhury</h1>
         <p class="header-subtitle">Researcher in Quantum Materials and Nanoelectronics</p>
         <button class="theme-toggle" aria-label="Toggle dark mode">☀️</button>
-        <button class="nav-toggle" aria-label="Toggle navigation menu">Menu ☰</button>
+        <button class="nav-toggle" aria-label="Toggle navigation">Menu ☰</button>
         <nav role="navigation">
             <ul>
                 <li><a href="/">Home</a></li>
@@ -25,16 +32,32 @@
     </header>
 
     <main>
-        <section id="key-concepts">
-            <h2>Key Concepts Applied in My Research</h2>
-            <ul>
-                <li><strong>Many-body perturbation theory & approximation techniques:</strong> Studied during my undergraduate thesis to understand quantum mechanical solutions and the need for real-space methods over reciprocal-space for molecular systems.</li>
-                <li><strong>Molecular orbital theory & density functional theory:</strong> Learned fundamentals (including ligand-field theory) to analyze low-dimensional molecular systems and defend my thesis work.</li>
-                <li><strong>Molecular electronic properties & transitions:</strong> Applied in my first publication to interpret NMR chemical shifts, Landé g-factor variations, and related spectroscopic data.</li>
-                <li><strong>Charge analysis methods (Mulliken, Löwdin, ELF):</strong> Used to investigate carrier localization, its limitations, and exchange/superexchange dynamics in doped systems.</li>
-                <li><strong>Group theory (field splitting, Kramers degeneracy):</strong> Applied to explain orbital quenching in 3D crystals and 2D materials, and to explore how reduced dimensionality can overcome crystal field limitations.</li>
-                <li><strong>Noncentrosymmetric molecular behavior:</strong> Studied to better interpret optoelectronic responses in reduced-symmetry systems.</li>
-            </ul>
+        <section id="retrospective">
+            <h2>Retrospective of My Academic & Research Journey</h2>
+            <p>This page provides a personal look back at the key concepts and experiences that have shaped my path as a researcher.</p>
+            
+            <section id="key-concepts">
+                <h3>Key Concepts Applied in My Research</h3>
+                <ul>
+                    <li><strong>Many-body perturbation theory & approximation techniques:</strong> Studied during my undergraduate thesis to understand quantum mechanical solutions and the need for real-space methods over reciprocal-space for molecular systems.</li>
+                    <li><strong>Molecular orbital theory & density functional theory:</strong> Learned fundamentals (including ligand-field theory) to analyze low-dimensional molecular systems and defend my thesis work.</li>
+                    <li><strong>Molecular electronic properties & transitions:</strong> Applied in my first publication to interpret NMR chemical shifts, Landé g-factor variations, and related spectroscopic data.</li>
+                    <li><strong>Charge analysis methods (Mulliken, Löwdin, ELF):</strong> Used to investigate carrier localization, its limitations, and exchange/superexchange dynamics in doped systems.</li>
+                    <li><strong>Group theory (field splitting, Kramers degeneracy):</strong> Applied to explain orbital quenching in 3D crystals and 2D materials, and to explore how reduced dimensionality can overcome crystal field limitations.</li>
+                    <li><strong>Noncentrosymmetric molecular behavior:</strong> Studied to better interpret optoelectronic responses in reduced-symmetry systems.</li>
+                </ul>
+            </section>
+
+            <section id="reflections">
+                <h3>Reflections & Lessons Learned</h3>
+                <ul>
+                    <li><strong>Undergraduate Research:</strong> I learned that real-world research is far more iterative and complex than textbook problems. The most valuable lesson was understanding the limitations of computational methods and the importance of method validation.</li>
+                    <li><strong>Collaboration:</strong> Working with peers and advisors taught me the power of diverse perspectives. My first publication was a testament to effective teamwork and communication, as we combined different expertise to solve a challenging problem.</li>
+                    <li><strong>Adaptability:</strong> My journey has involved shifting from theory-heavy coursework to practical, hands-on computational physics. This taught me to be adaptable and to embrace new learning opportunities outside my primary discipline.</li>
+                </ul>
+            </section>
+
+            <a href="/" class="button" aria-label="Return to home page">Back to Home</a>
         </section>
     </main>
 
@@ -42,13 +65,32 @@
         <p>© 2025 Saraf Mohaimen Chowdhury</p>
     </footer>
 
-    <script src="script.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XDLQ8RS51Q"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XDLQ8RS51Q');
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Navigation Toggle
+            const navToggle = document.querySelector('.nav-toggle');
+            const navUl = document.querySelector('nav ul');
+
+            if (navToggle && navUl) {
+                navToggle.addEventListener('click', function() {
+                    navUl.classList.toggle('active');
+                });
+            }
+
+            // Theme Toggle
+            const themeToggle = document.querySelector('.theme-toggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', function() {
+                    document.body.classList.toggle('dark-mode');
+                    themeToggle.textContent = document.body.classList.contains('dark-mode') ? '🌙' : '☀️';
+                    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+                });
+                if (localStorage.getItem('theme') === 'dark') {
+                    document.body.classList.add('dark-mode');
+                    themeToggle.textContent = '🌙';
+                }
+            }
+        });
     </script>
     <script data-goatcounter="https://sarafmohaimen.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
