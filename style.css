@@ -68,13 +68,6 @@ header h1 {
     color: var(--text-color);
 }
 
-.header-location {
-    font-size: 0.9em;          /* slightly smaller than subtitle */
-    color: var(--text-color);
-    opacity: 0.7;              /* a bit lighter for less emphasis */
-    margin-top: 4px;           /* small spacing below subtitle */
-    font-style: normal;        /* keep it straightforward */
-}
 
 /* =============================== */
 /*          Navigation             */
@@ -453,4 +446,5 @@ a:focus {
         display: none;
     }
 }
+
 
