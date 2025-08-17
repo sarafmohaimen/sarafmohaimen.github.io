@@ -10,8 +10,8 @@ This is my personal academic website, built and hosted with **GitHub Pages**, wh
 
 ## Sections
 - **Overview** – My research focus and background  
-- **Publications** – Articles, preprints, and conference papers  
-- **Projects** – Highlights of ongoing and past research  
+- **Publications** – Articles, ongoing works, and perspectives  
+- **Projects** – Highlights of past research  
 - **Gear** – Tools and software I work with  
 - **Profiles** – Links to my academic profiles & contact information  
 - **Retrospective** - Important theoretical concepts applied in my research
