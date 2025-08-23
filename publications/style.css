@@ -449,73 +449,71 @@ a:focus {
 /* =============================== */
 /*      Subscription Form          */
 /* =============================== */
-.subscription-form {
+/* Subscription box */
+.subscription-box {
     max-width: 400px;
     margin: 40px auto;
-    padding: 25px 20px;
-    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
     text-align: center;
-    font-family: 'Merriweather', Georgia, serif;
-    background: linear-gradient(to bottom, var(--button-bg) 0%, var(--button-hover) 100%);
-    color: #fff;
-    box-shadow: var(--card-shadow);
-    transition: background 0.3s ease, color 0.3s ease;
+    font-family: sans-serif;
+    background: #f9f9f9;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.subscription-form h3 {
-    margin-bottom: 20px;
-    font-size: 1.5em;
-    color: #fff;
-}
-
-.subscription-form input {
-    width: 80%;
-    padding: 12px;
+/* Heading */
+.subscription-box h3 {
     margin-bottom: 15px;
-    border: none;
-    border-radius: 6px;
-    outline: none;
-    font-size: 1em;
-    color: #222;
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    color: #333;
 }
 
-.subscription-form button {
-    padding: 12px 25px;
+/* Input field */
+.subscription-box input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button */
+.subscription-box button {
+    padding: 10px 20px;
+    background: #007BFF;   /* blue */
+    color: white;
     border: none;
-    border-radius: 6px;
-    background: #fff;
-    color: var(--button-bg);
-    font-weight: 600;
+    border-radius: 5px;
     cursor: pointer;
-    transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+    font-weight: 600;
+    transition: background 0.3s;
 }
 
-.subscription-form button:hover {
-    background: #e0e0e0;
-    transform: scale(1.05);
+.subscription-box button:hover {
+    background: #0056b3;   /* darker blue */
 }
 
-.subscription-form p {
-    margin-top: 15px;
-    font-size: 0.9em;
+/* --- Dark Mode Fix --- */
+body.dark-mode .subscription-box {
+    background: #1e1e1e;
+    border-color: #444;
     color: #eee;
 }
 
-/* Dark Mode Adjustments */
-body.dark-mode .subscription-form {
-    background: linear-gradient(to bottom, var(--button-bg) 0%, var(--button-hover) 100%);
+body.dark-mode .subscription-box h3 {
     color: #fff;
 }
 
-body.dark-mode .subscription-form input {
+body.dark-mode .subscription-box input {
     background: #333;
+    border: 1px solid #555;
     color: #eee;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
 
-body.dark-mode .subscription-form button {
-    background: #fff;
-    color: var(--button-bg);
+body.dark-mode .subscription-box button {
+    background: #3399ff;
+}
+
+body.dark-mode .subscription-box button:hover {
+    background: #1a73e8;
 }
