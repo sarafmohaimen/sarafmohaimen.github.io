@@ -140,14 +140,22 @@
                 </ul>
             </div>
             <!-- Email Subscription Form -->
-            <div class="subscription-box">
-                <h3>Subscribe for Updates</h3>
+            <div style="max-width:400px; margin:40px auto; padding:20px; border:1px solid #ddd; border-radius:10px; text-align:center; font-family:sans-serif; background:#f9f9f9;">
+                <h3 style="margin-bottom:15px;">Subscribe for Updates</h3>
                 <form action="https://formspree.io/f/xvgqeywr" method="POST">
-                    <input type="email" name="email" placeholder="Enter your email" required>
+                    <input 
+                        type="email" 
+                        name="email" 
+                        placeholder="Enter your email" 
+                        required 
+                        style="width:80%; padding:10px; margin-bottom:10px; border:1px solid #ccc; border-radius:5px;"
+                    >
                     <br>
-                    <button type="submit">Subscribe</button>
+                    <button type="submit" style="padding:10px 20px; border:none; border-radius:5px; background:#007bff; color:white; cursor:pointer;">
+                        Subscribe
+                    </button>
                 </form>
-                <p>You will be notified when new publications are added.</p>
+                <p style="margin-top:15px; font-size:0.9em; color:#555;">You will be notified when new publications are added.</p>
             </div>
             
         </section>
