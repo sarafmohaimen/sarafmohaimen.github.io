@@ -445,26 +445,3 @@ a:focus {
         display: none;
     }
 }
-
-/* --- Dark Mode Override for Inline-Styled Form --- */
-
-body.dark-mode #email-form {
-    background: #2d2d2d !important;
-    border-color: #555 !important;
-}
-
-body.dark-mode #email-form input,
-body.dark-mode #email-form textarea {
-    background-color: #444 !important;
-    border-color: #666 !important;
-    color: #eee !important;
-}
-
-body.dark-mode #email-form button {
-    background: #007bff !important; /* Keep original blue or change if you want */
-    color: white !important;
-}
-
-body.dark-mode #email-form p {
-    color: #bbb !important;
-}
