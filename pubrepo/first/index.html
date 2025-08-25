@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Analytics -->
+    
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XDLQ8RS51Q"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -16,20 +16,18 @@
 </head>
 <body>
     <p>Redirecting to document...</p>
-    <!-- GoatCounter -->
+    
     <script data-goatcounter="https://sarafmohaimen.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
     <script>
-      // Track page load with GoatCounter
+      
       if (window.goatcounter) {
         window.goatcounter.count({ path: '/click/manuscripts-one-link' });
       }
 
-      // Obfuscated Google Drive file ID (split into parts)
       const part1 = '1-KO41fzhbq';
       const part2 = 'LosnrElTku41TS86erwHcK';
       const driveUrl = 'https://drive.google.com/file/d/' + part1 + part2 + '/view?usp=sharing';
       
-      // Perform redirect after a brief delay to ensure analytics tracking
       setTimeout(() => {
         window.location.href = driveUrl;
       }, 500);
