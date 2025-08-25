@@ -28,7 +28,8 @@
     <meta property="og:url" content="https://sarafmohaimen.github.io/">
     <meta property="og:type" content="website">
     
-    <link rel="stylesheet" href="/style.css"> <style>
+    <link rel="stylesheet" href="/style.css"> 
+    <style>
         .milestone-block {
             background-color: #f8f9fa;
             border-left: 4px solid #0077cc;
@@ -149,7 +150,9 @@
     <main>
         <section id="hero" class="hero-container">
             <figure class="hero-image">
-                <img src="/IMG_9350.JPG" alt="Profile picture of Saraf Mohaimen Chowdhury" loading="lazy"> </figure>
+                <img src="/IMG_9350.JPG" alt="Profile picture of Saraf Mohaimen Chowdhury" loading="lazy">
+                <a href="https://drive.google.com/file/d/1GWk5TqG646nXfIdkHo-FsyLVbtTzq07g/view?usp=sharing" class="cta-button" target="_blank" aria-label="Download CV of Saraf Mohaimen Chowdhury" onclick="trackCvDownload()">Download CV</a>
+            </figure>
             <div class="hero-text">
                 <h2>Welcome!</h2>
                 <p>This is my personal academic website where you can find information about my research, publications, and projects.</p>
@@ -169,7 +172,6 @@
     <footer>
         <p>© 2025 Saraf Mohaimen Chowdhury | B.Sc. in EEE, Port City International University | <a href="/profiles/">Profile & Contact</a></p>
     </footer>
-
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -197,15 +199,24 @@
                 }
             }
         });
+
+        // Track CV download for Google Analytics and GoatCounter
+        function trackCvDownload() {
+            // Google Analytics event
+            if (typeof gtag === 'function') {
+                gtag('event', 'download_cv', {
+                    'event_category': 'engagement',
+                    'event_label': 'Download CV Button'
+                });
+            }
+            // GoatCounter event
+            if (window.goatcounter) {
+                window.goatcounter.count({
+                    path: 'download-cv',
+                    event: true
+                });
+            }
+        }
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
