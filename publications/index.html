@@ -178,8 +178,24 @@
     </main>
 
     <footer>
-        <p>© 2025 Saraf Mohaimen Chowdhury | B.Sc. in EEE, Port City International University | <a href="/profiles/">Profile & Contact</a></p>
+    <p>© 2025 Saraf Mohaimen Chowdhury | <a href="/profiles/">Profile & Contact</a> | My Local Time: <span id="bd-time"></span></p>
     </footer>
+    
+    <script>
+        function updateBDTime() {
+            const now = new Date();
+            const bdOptions = {
+                timeZone: 'Asia/Dhaka',
+                hour12: false, 
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            };
+            document.getElementById('bd-time').textContent = now.toLocaleTimeString('en-US', bdOptions);
+        }
+        updateBDTime();
+        setInterval(updateBDTime, 1000); 
+    </script>
     
 
     <script>
