@@ -121,8 +121,24 @@
     </main>
 
     <footer>
-        <p>© <span id="current-year"></span> Saraf Mohaimen Chowdhury | B.Sc. in EEE, Port City International University | <a href="/profiles/">Profile & Contact</a></p>
+        <p>© <span id="current-year"></span> Saraf Mohaimen Chowdhury | <a href="/profiles/">Profile & Contact</a> | My Local Time: <span id="bd-time"></span></p>
     </footer>
+    
+    <script>
+        function updateBDTime() {
+            const now = new Date();
+            const bdOptions = {
+                timeZone: 'Asia/Dhaka',
+                hour12: false, 
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            };
+            document.getElementById('bd-time').textContent = now.toLocaleTimeString('en-US', bdOptions);
+        }
+        updateBDTime();
+        setInterval(updateBDTime, 1000); 
+    </script>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -162,4 +178,5 @@
         async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
+
 
