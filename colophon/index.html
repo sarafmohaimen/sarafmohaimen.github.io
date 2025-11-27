@@ -50,7 +50,7 @@
     <p>© 2025 Saraf Mohaimen Chowdhury | <a href="/colophon/">Colophon</a> | My Local Time: <span id="bd-time"></span></p>
   </footer>
 
-  <!-- Bangladesh clock (your existing code) -->
+  
   <script>
     function updateBDTime() {
       const now = new Date();
@@ -61,17 +61,17 @@
     setInterval(updateBDTime, 1000);
   </script>
 
-  <!-- Auto “Last updated” date (Bangladesh time) -->
+ 
   <script>
     const options = { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'Asia/Dhaka' };
-    const today = new Date().toLocaleDateString('en-GB', options);  // e.g. 27 November 2025
+    const today = new Date().toLocaleDateString('en-GB', options);  
     document.addEventListener('DOMContentLoaded', () => {
       const el = document.getElementById('last-updated');
       if (el) el.textContent = today;
     });
   </script>
 
-  <!-- Your existing theme + mobile nav toggle script (copy from any page) -->
+  
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const navToggle = document.querySelector('.nav-toggle');
