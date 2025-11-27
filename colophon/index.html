@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colophon – Saraf Mohaimen Chowdhury</title>
+  <meta name="description" content="Technical details and design notes about this website">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Saraf Mohaimen Chowdhury</h1>
+    <p class="header-subtitle">Early-Stage Researcher in Quantum Materials and Nanoelectronics</p>
+    <p class="header-location">Chattogram, Bangladesh</p>
+    <button class="theme-toggle" aria-label="Toggle dark mode">☀️</button>
+    <button class="nav-toggle" aria-label="Toggle navigation">Menu ☰</button>
+    <nav role="navigation">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/overview/">Overview</a></li>
+        <li><a href="/publications/">Publications</a></li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/gear/">Gear</a></li>
+        <li><a href="/profiles/">Profiles</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main style="max-width: 640px; margin: 4rem auto; padding: 0 1.5rem;">
+    <h2>Colophon</h2>
+    <p><em>Last updated <span id="last-updated"></span></em></p>
+
+    <p>This site is hand-written static HTML and CSS, deliberately lightweight and framework-free.</p>
+
+    <ul style="line-height: 1.7; margin: 1.2rem 0;">
+      <li><strong>Hosting</strong> — GitHub Pages</li>
+      <li><strong>Body typeface</strong> — Merriweather (Google Fonts) with Georgia fallback</li>
+      <li><strong>Colours & dark mode</strong> — CSS custom properties, toggled via a single class on &lt;body&gt;</li>
+      <li><strong>No build tools</strong> — plain .html and .css files, edited in VS Code</li>
+      <li><strong>JavaScript</strong> — minimal vanilla scripts for dark-mode toggle, mobile menu, and the local-time clock</li>
+      <li><strong>Philosophy</strong> — fast, readable on any device, works without JavaScript, looks decent with CSS disabled</li>
+      <li><strong>Thanks to</strong> — Grok (xAI) for design suggestions</li>
+    </ul>
+
+    <p>First published in 2024; minor updates and new sections added as needed.</p>
+  </main>
+
+  <footer>
+    <p>© 2025 Saraf Mohaimen Chowdhury | <a href="/colophon/">Colophon</a> | My Local Time: <span id="bd-time"></span></p>
+  </footer>
+
+  <!-- Bangladesh clock (your existing code) -->
+  <script>
+    function updateBDTime() {
+      const now = new Date();
+      const bdOptions = { timeZone: 'Asia/Dhaka', hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' };
+      document.getElementById('bd-time').textContent = now.toLocaleTimeString('en-US', bdOptions);
+    }
+    updateBDTime();
+    setInterval(updateBDTime, 1000);
+  </script>
+
+  <!-- Auto “Last updated” date (Bangladesh time) -->
+  <script>
+    const options = { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'Asia/Dhaka' };
+    const today = new Date().toLocaleDateString('en-GB', options);  // e.g. 27 November 2025
+    document.addEventListener('DOMContentLoaded', () => {
+      const el = document.getElementById('last-updated');
+      if (el) el.textContent = today;
+    });
+  </script>
+
+  <!-- Your existing theme + mobile nav toggle script (copy from any page) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const navToggle = document.querySelector('.nav-toggle');
+      const navUl = document.querySelector('nav ul');
+      if (navToggle && navUl) {
+        navToggle.addEventListener('click', () => navUl.classList.toggle('active'));
+      }
+
+      const themeToggle = document.querySelector('.theme-toggle');
+      if (themeToggle) {
+        themeToggle.addEventListener('click', function() {
+          document.body.classList.toggle('dark-mode');
+          themeToggle.textContent = document.body.classList.contains('dark-mode') ? '🌙' : '☀️';
+          localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+        });
+        if (localStorage.getItem('theme') === 'dark') {
+          document.body.classList.add('dark-mode');
+          themeToggle.textContent = '🌙';
+        }
+      }
+    });
+  </script>
+</body>
+</html>
