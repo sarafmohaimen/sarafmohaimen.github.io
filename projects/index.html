@@ -1,182 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XDLQ8RS51Q"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XDLQ8RS51Q');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XDLQ8RS51Q');
     </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Undergraduate research projects by Saraf Mohaimen Chowdhury in quantum materials and nanoelectronics.">
-    <meta name="keywords" content="quantum materials, nanoelectronics, research projects, Saraf Mohaimen Chowdhury">
     <title>Projects - Saraf Mohaimen Chowdhury</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Undergraduate research projects by Saraf Mohaimen Chowdhury in quantum materials and nanoelectronics.">
+    
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" aria-label="Toggle dark mode">
+        <span class="theme-icon">☀️</span>
+    </button>
+    
+    <!-- Header -->
     <header>
-        <h1>Saraf Mohaimen Chowdhury</h1>
-        <p class="header-subtitle">Early-Stage Researcher in Quantum Materials and Nanoelectronics</p>
-        <p class="header-location">Chattogram, Bangladesh</p>
-        <button class="theme-toggle" aria-label="Toggle dark mode">☀️</button>
-        <button class="nav-toggle" aria-label="Toggle navigation">Menu ☰</button>
-        <nav role="navigation">
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/overview/">Overview</a></li>
-                <li><a href="/publications/">Publications</a></li>
-                <li><a href="/projects/" aria-current="page">Projects</a></li>
-                <li><a href="/gear/">Gear</a></li>
-                <li><a href="/profiles/">Profiles</a></li>
+        <div class="container header-content">
+            <div>
+                <h1 class="header-title">Saraf Mohaimen Chowdhury</h1>
+                <p class="header-subtitle">Quantum Materials & Low-Dimensional Nanoelectronics</p>
+            </div>
+        </div>
+        
+        <nav class="container" role="navigation" aria-label="Main navigation">
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+            <ul class="nav-list">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/overview/" class="nav-link">Overview</a></li>
+                <li><a href="/publications/" class="nav-link">Publications</a></li>
+                <li><a href="/projects/" class="nav-link" aria-current="page">Projects</a></li>
+                <li><a href="/gear/" class="nav-link">Gear</a></li>
+                <li><a href="/profiles/" class="nav-link">Profiles</a></li>
             </ul>
         </nav>
     </header>
-
-    <main role="main">
-        <section id="projects">
-            <h2>Research Projects</h2>
-            <p>
-                The following is a list of unpublished works carried out during and shortly after my bachelor studies, as part of thesis, coursework, lab assignments, or independent research engagement.
+    
+    <!-- Main Content -->
+    <main class="container">
+        <section aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Research Projects</h2>
+            <p class="lead">
+                Unpublished works carried out during and shortly after my bachelor studies, as part of thesis, coursework, lab assignments, or independent research engagement.
             </p>
-            <ul class="project-list">
-                <li>
-                    <strong>Predicting Single-Soliton Solutions Using a Bilinear Neural Network</strong><br>
-                    <a href="https://doi.org/10.6084/m9.figshare.29819471.v1" target="_blank" rel="noopener"
-                        onclick="goatcounter.count({ path: '/click/abstract-drive-link-BNN' })">DOI: 10.6084/m9.figshare.29819471.v1</a>
-                </li>
-                <li>
-                    <strong>Comparative Analysis of 2H and 1T Phase Monolayers of MoS₂ and WS₂ for Spintronics Applications</strong>
-                </li>
-                <li>
-                    <strong>Absorption and Emission Spectra of Colloidal Quantum Dots: A Finite Element Study with Ansys Lumerical</strong><br>
-                    <a href="https://doi.org/10.6084/m9.figshare.29819504.v1" target="_blank" rel="noopener"
-                        onclick="goatcounter.count({ path: '/click/abstract-drive-link-Lumerical' })">DOI: 10.6084/m9.figshare.29819504.v1</a>
-                </li>
-                <li>
-                    <strong>Analytical Solutions of the Pauli–Fierz Hamiltonian for a Two-Level System in a Single-Mode Cavity Using Julia</strong><br>
-                    <a href="https://doi.org/10.6084/m9.figshare.29820023.v1" target="_blank" rel="noopener"
-                        onclick="goatcounter.count({ path: '/click/abstract-drive-link-JULIA' })">DOI: 10.6084/m9.figshare.29820023.v1</a>
-                </li>
-                <li>
-                    <strong>Wavefunction Polarization in a Circular Quantum Dot Using the Schrödinger–Poisson Model in COMSOL</strong><br>
-                    <a href="https://doi.org/10.6084/m9.figshare.29820131.v1" target="_blank" rel="noopener"
-                        onclick="goatcounter.count({ path: '/click/abstract-drive-link-COMSOL' })">DOI: 10.6084/m9.figshare.29820131.v1</a>
-                </li>
-                <li>
-                    <strong>Study & Design of Various Patch Antenna for Wideband Communication Using CST Studio</strong><br>
-                    <a href="https://doi.org/10.6084/m9.figshare.29820899.v1" target="_blank" rel="noopener"
-                        onclick="goatcounter.count({ path: '/click/abstract-drive-link-ANTENNA' })">DOI: 10.6084/m9.figshare.29820899.v1</a>
-                </li>
-                <li>
-                    <strong>Optimal Channel Encoding/Decoding Algorithm Design with MATLAB</strong><br>
-                    <a href="https://doi.org/10.6084/m9.figshare.29820950.v1" target="_blank" rel="noopener"
-                        onclick="goatcounter.count({ path: '/click/abstract-drive-link-Channel' })">DOI: 10.6084/m9.figshare.29820950.v1</a>
-                </li>
-                <li>
-                    <strong>Data Compression and Image Processing Techniques in MATLAB</strong><br>
-                    <a href="https://doi.org/10.6084/m9.figshare.29821067.v1" target="_blank" rel="noopener"
-                        onclick="goatcounter.count({ path: '/click/abstract-drive-link-Image' })">DOI: 10.6084/m9.figshare.29821067.v1</a>
-                </li>
-                <li>
-                    <strong>Design and Simulation of CMOS Logic Gates Using Microwind</strong><br>
-                    <a href="https://doi.org/10.6084/m9.figshare.29821109.v1" target="_blank" rel="noopener"
-                        onclick="goatcounter.count({ path: '/click/abstract-drive-link-Microwind' })">DOI: 10.6084/m9.figshare.29821109.v1</a>
-                </li>
-                <li>
-                    <strong>A Brief Survey on Professional Ethics Related to The Medical Sector</strong><br>
-                    <a href="https://drive.google.com/file/d/1MetBk2qM4LJZiAH8tHFJE2bBXQWKeDuW/view?usp=sharing" target="_blank" rel="noopener"
-                        onclick="goatcounter.count({ path: '/click/abstract-drive-link-survey_report' })">Google Drive</a>
-                </li>
-                <li>
-                    <strong>Wireless Sensor Data Logging and Transmission System: A Proteus Simulation</strong><br>
-                    <a href="https://drive.google.com/file/d/1OG7X7CBbwNRNMojbglfudSB9x7Blg_Mv/view?usp=sharing" target="_blank" rel="noopener"
-                        onclick="goatcounter.count({ path: '/click/abstract-drive-link-data_logging' })">Google Drive</a>
-                </li>
-                <li>
-                    <strong>Microcontroller based Protective Relay to detect Reverse Power Flow in a Generator: A Proteus Simulation</strong><br>
-                    <a href="https://drive.google.com/file/d/1sb_9Q9CyNiXOy6EEqRUG9XPIQeusLjxP/view?usp=sharing" target="_blank" rel="noopener"
-                        onclick="goatcounter.count({ path: '/click/abstract-drive-link-protective_relay' })">Google Drive</a>
-                </li>
-            </ul>
-
-            <div class="publication-group">
-                <h3>Conference Presentations</h3>
-                <ul class="publication-list">
-                    <li>
-                        <cite class="title">Programmable Orbital-Nematic Coupling and Multi-State Spin–Orbital Switching in Defect-Engineered 2D Metal-Chalcogenide Quantum Dots.</cite>
+            
+            <!-- Computational Physics Projects -->
+            <div class="content-group">
+                <h3>Computational Physics & Simulation</h3>
+                <ul class="project-list">
+                    <li class="project-item">
+                        <h4 class="project-title">Predicting Single-Soliton Solutions Using a Bilinear Neural Network</h4>
+                        <a href="https://doi.org/10.6084/m9.figshare.29819471.v1" 
+                           class="project-link" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           onclick="if(window.goatcounter)goatcounter.count({path:'/click/abstract-drive-link-BNN'})">
+                            DOI: 10.6084/m9.figshare.29819471.v1 ↗
+                        </a>
                     </li>
-                    <li>
-                        <cite class="title">Can Nonlinear Phase Inversion in Quantum Dots Simulate Artificial Horizons?</cite>
+                    
+                    <li class="project-item">
+                        <h4 class="project-title">Absorption and Emission Spectra of Colloidal Quantum Dots</h4>
+                        <p class="project-note">Finite Element Study with Ansys Lumerical</p>
+                        <a href="https://doi.org/10.6084/m9.figshare.29819504.v1" 
+                           class="project-link" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           onclick="if(window.goatcounter)goatcounter.count({path:'/click/abstract-drive-link-Lumerical'})">
+                            DOI: 10.6084/m9.figshare.29819504.v1 ↗
+                        </a>
+                    </li>
+                    
+                    <li class="project-item">
+                        <h4 class="project-title">Analytical Solutions of the Pauli–Fierz Hamiltonian</h4>
+                        <p class="project-note">Two-Level System in Single-Mode Cavity Using Julia</p>
+                        <a href="https://doi.org/10.6084/m9.figshare.29820023.v1" 
+                           class="project-link" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           onclick="if(window.goatcounter)goatcounter.count({path:'/click/abstract-drive-link-JULIA'})">
+                            DOI: 10.6084/m9.figshare.29820023.v1 ↗
+                        </a>
+                    </li>
+                    
+                    <li class="project-item">
+                        <h4 class="project-title">Wavefunction Polarization in a Circular Quantum Dot</h4>
+                        <p class="project-note">Schrödinger–Poisson Model in COMSOL</p>
+                        <a href="https://doi.org/10.6084/m9.figshare.29820131.v1" 
+                           class="project-link" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           onclick="if(window.goatcounter)goatcounter.count({path:'/click/abstract-drive-link-COMSOL'})">
+                            DOI: 10.6084/m9.figshare.29820131.v1 ↗
+                        </a>
+                    </li>
+                    
+                    <li class="project-item">
+                        <h4 class="project-title">Comparative Analysis of 2H and 1T Phase Monolayers</h4>
+                        <p class="project-note">MoS₂ and WS₂ for Spintronics Applications</p>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Engineering Projects -->
+            <div class="content-group">
+                <h3>Engineering & Design</h3>
+                <ul class="project-list">
+                    <li class="project-item">
+                        <h4 class="project-title">Wideband Patch Antenna Design</h4>
+                        <p class="project-note">CST Studio Simulation</p>
+                        <a href="https://doi.org/10.6084/m9.figshare.29820899.v1" 
+                           class="project-link" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           onclick="if(window.goatcounter)goatcounter.count({path:'/click/abstract-drive-link-ANTENNA'})">
+                            DOI: 10.6084/m9.figshare.29820899.v1 ↗
+                        </a>
+                    </li>
+                    
+                    <li class="project-item">
+                        <h4 class="project-title">Optimal Channel Encoding/Decoding Algorithm</h4>
+                        <p class="project-note">MATLAB Implementation</p>
+                        <a href="https://doi.org/10.6084/m9.figshare.29820950.v1" 
+                           class="project-link" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           onclick="if(window.goatcounter)goatcounter.count({path:'/click/abstract-drive-link-Channel'})">
+                            DOI: 10.6084/m9.figshare.29820950.v1 ↗
+                        </a>
+                    </li>
+                    
+                    <li class="project-item">
+                        <h4 class="project-title">Data Compression and Image Processing Techniques</h4>
+                        <p class="project-note">MATLAB Implementation</p>
+                        <a href="https://doi.org/10.6084/m9.figshare.29821067.v1" 
+                           class="project-link" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           onclick="if(window.goatcounter)goatcounter.count({path:'/click/abstract-drive-link-Image'})">
+                            DOI: 10.6084/m9.figshare.29821067.v1 ↗
+                        </a>
+                    </li>
+                    
+                    <li class="project-item">
+                        <h4 class="project-title">CMOS Logic Gates Design and Simulation</h4>
+                        <p class="project-note">Microwind Implementation</p>
+                        <a href="https://doi.org/10.6084/m9.figshare.29821109.v1" 
+                           class="project-link" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           onclick="if(window.goatcounter)goatcounter.count({path:'/click/abstract-drive-link-Microwind'})">
+                            DOI: 10.6084/m9.figshare.29821109.v1 ↗
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Other Projects -->
+            <div class="content-group">
+                <h3>Other Work</h3>
+                <ul class="project-list">
+                    <li class="project-item">
+                        <h4 class="project-title">Professional Ethics in the Medical Sector</h4>
+                        <p class="project-note">Brief survey report</p>
+                        <a href="https://drive.google.com/file/d/1MetBk2qM4LJZiAH8tHFJE2bBXQWKeDuW/view?usp=sharing" 
+                           class="project-link" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           onclick="if(window.goatcounter)goatcounter.count({path:'/click/abstract-drive-link-survey_report'})">
+                            Google Drive ↗
+                        </a>
+                    </li>
+                    
+                    <li class="project-item">
+                        <h4 class="project-title">Wireless Sensor Data Logging and Transmission System</h4>
+                        <p class="project-note">Proteus Simulation</p>
+                        <a href="https://drive.google.com/file/d/1OG7X7CBbwNRNMojbglfudSB9x7Blg_Mv/view?usp=sharing" 
+                           class="project-link" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           onclick="if(window.goatcounter)goatcounter.count({path:'/click/abstract-drive-link-data_logging'})">
+                            Google Drive ↗
+                        </a>
+                    </li>
+                    
+                    <li class="project-item">
+                        <h4 class="project-title">Microcontroller-based Protective Relay for Generator</h4>
+                        <p class="project-note">Reverse Power Flow Detection via Proteus Simulation</p>
+                        <a href="https://drive.google.com/file/d/1sb_9Q9CyNiXOy6EEqRUG9XPIQeusLjxP/view?usp=sharing" 
+                           class="project-link" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           onclick="if(window.goatcounter)goatcounter.count({path:'/click/abstract-drive-link-protective_relay'})">
+                            Google Drive ↗
+                        </a>
                     </li>
                 </ul>
             </div>
         </section>
+        
+        <!-- Conference Presentations -->
+        <section aria-labelledby="presentations-heading">
+            <h2 id="presentations-heading">Conference Presentations</h2>
+            <ul class="presentation-list">
+                <li class="presentation-item">
+                    <h4 class="presentation-title">Programmable Orbital-Nematic Coupling and Multi-State Spin–Orbital Switching in Defect-Engineered 2D Metal-Chalcogenide Quantum Dots</h4>
+                </li>
+                <li class="presentation-item">
+                    <h4 class="presentation-title">Can Nonlinear Phase Inversion in Quantum Dots Simulate Artificial Horizons?</h4>
+                </li>
+            </ul>
+        </section>
     </main>
-
+    
+    <!-- Footer -->
     <footer>
-    <p>© 2025 Saraf Mohaimen Chowdhury | <a href="/colophon/">Colophon</a> | My Local Time: <span id="bd-time"></span></p>
+        <div class="container footer-content">
+            <p>&copy; 2025 Saraf Mohaimen Chowdhury</p>
+            <div class="footer-links">
+                <a href="/colophon/">Colophon</a>
+                <span class="time-display" id="bd-time"></span>
+            </div>
+        </div>
     </footer>
     
+    <!-- Scripts -->
     <script>
+        // Bangladesh Time
         function updateBDTime() {
             const now = new Date();
-            const bdOptions = {
+            const options = {
                 timeZone: 'Asia/Dhaka',
-                hour12: false, 
+                hour12: false,
                 hour: '2-digit',
-                minute: '2-digit',
-                second: '2-digit'
+                minute: '2-digit'
             };
-            document.getElementById('bd-time').textContent = now.toLocaleTimeString('en-US', bdOptions);
+            document.getElementById('bd-time').textContent = 
+                now.toLocaleTimeString('en-US', options) + ' BST';
         }
         updateBDTime();
-        setInterval(updateBDTime, 1000); 
-    </script>
-
-    <script>
+        setInterval(updateBDTime, 60000);
+        
+        // Navigation & Theme
         document.addEventListener('DOMContentLoaded', function() {
-            // Set dynamic year in footer
-            document.getElementById('current-year').textContent = new Date().getFullYear();
-
-            // Mobile Navigation Toggle
             const navToggle = document.querySelector('.nav-toggle');
-            const navUl = document.querySelector('nav ul');
-            if (navToggle && navUl) {
+            const navList = document.querySelector('.nav-list');
+            
+            if (navToggle && navList) {
                 navToggle.addEventListener('click', function() {
-                    navUl.classList.toggle('active');
-                    navToggle.textContent = navUl.classList.contains('active') ? 'Close ✕' : 'Menu ☰';
+                    const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+                    navToggle.setAttribute('aria-expanded', !isExpanded);
+                    navList.classList.toggle('active');
+                    navToggle.textContent = isExpanded ? 'Menu' : 'Close';
                 });
-            } else {
-                console.warn('Navigation toggle or menu not found');
             }
-
-            // Theme Toggle
+            
             const themeToggle = document.querySelector('.theme-toggle');
-            if (themeToggle) {
-                themeToggle.addEventListener('click', function() {
-                    document.body.classList.toggle('dark-mode');
-                    themeToggle.textContent = document.body.classList.contains('dark-mode') ? '🌙' : '☀️';
-                    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-                });
-                if (localStorage.getItem('theme') === 'dark') {
-                    document.body.classList.add('dark-mode');
-                    themeToggle.textContent = '🌙';
-                }
-            } else {
-                console.warn('Theme toggle not found');
+            const themeIcon = document.querySelector('.theme-icon');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const storedTheme = localStorage.getItem('theme');
+            
+            if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
+                document.body.classList.add('dark-mode');
+                themeIcon.textContent = '🌙';
             }
+            
+            themeToggle.addEventListener('click', function() {
+                document.body.classList.toggle('dark-mode');
+                const isDark = document.body.classList.contains('dark-mode');
+                themeIcon.textContent = isDark ? '🌙' : '☀️';
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            });
         });
     </script>
+    
+    <!-- GoatCounter -->
     <script data-goatcounter="https://sarafmohaimen.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+            async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
-
-
-
-
-
-
