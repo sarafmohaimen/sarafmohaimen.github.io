@@ -1,148 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XDLQ8RS51Q"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XDLQ8RS51Q');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XDLQ8RS51Q');
     </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Overview - Saraf Mohaimen Chowdhury</title>
-    <link rel="stylesheet" href="/style.css"> </head>
+    <meta name="description" content="Research overview, interests, and academic influences of Saraf Mohaimen Chowdhury.">
+    
+    <link rel="stylesheet" href="/style.css">
+</head>
 <body>
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" aria-label="Toggle dark mode">
+        <span class="theme-icon">☀️</span>
+    </button>
+    
+    <!-- Header -->
     <header>
-        <h1>Saraf Mohaimen Chowdhury</h1>
-        <p class="header-subtitle">Early-Stage Researcher in Quantum Materials and Nanoelectronics</p>
-        <p class="header-location">Chattogram, Bangladesh</p>
-        <button class="theme-toggle" aria-label="Toggle dark mode">☀️</button>
-        <button class="nav-toggle" aria-label="Toggle navigation">Menu ☰</button>
-        <nav role="navigation">
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/overview/">Overview</a></li>
-                <li><a href="/publications/">Publications</a></li>
-                <li><a href="/projects/">Projects</a></li>
-                <li><a href="/gear/">Gear</a></li> 
-                <li><a href="/profiles/">Profiles</a></li>
+        <div class="container header-content">
+            <div>
+                <h1 class="header-title">Saraf Mohaimen Chowdhury</h1>
+                <p class="header-subtitle">Quantum Materials & Low-Dimensional Nanoelectronics</p>
+            </div>
+        </div>
+        
+        <nav class="container" role="navigation" aria-label="Main navigation">
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+            <ul class="nav-list">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/overview/" class="nav-link" aria-current="page">Overview</a></li>
+                <li><a href="/publications/" class="nav-link">Publications</a></li>
+                <li><a href="/projects/" class="nav-link">Projects</a></li>
+                <li><a href="/gear/" class="nav-link">Gear</a></li>
+                <li><a href="/profiles/" class="nav-link">Profiles</a></li>
             </ul>
         </nav>
     </header>
-
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I'm Saraf Mohaimen Chowdhury, an early-stage independent researcher from Bangladesh, passionate to learn about quantum materials and nanoscale phenomena. 
-                My work primarily aims to understand the physical properties of nanomaterials by using first-principles calculations 
-                and exploring how small structures such as atomically thin layers, can lead to new opportunities in electronics, photonics, and information functionalities. 
-                In particular, I'm interested in how spins, light, and topology are interconnected at the subatomic level, and how we can harness these aspects for future technologies.</p>
-        </section>
-
-        <section id="research-interests">
-            <h2>Research Interests</h2>
-            <p>I enjoy how studying the tiny fragments of the universe can expose the deeper workings of nature. My research focuses on the properties and applications of low-dimensional quantum materials. I am particularly interested in:</p>
-            
-            <h3>Current Research Interests</h3>
-            <ul class="publication-list">
-                <li>Spin-Dynamics in Low-dimensional Materials (2D monolayers, quantum dots, TM-based compounds)</li>
-                <li>Nonlinear Optics in Noncentrosymmetric Systems</li>
-                <li>Density Functional Theory (DFT) and various Computational Physics</li>
-                <li>Doping, Defects, and Surface-Induced Disorder in 2D Flakes</li>
-            </ul>
     
-            <h3>Future Research Interests</h3>
-            <ul class="publication-list">
-                <li>Real-space Topological Features of Confined Materials</li>
-                <li>Cavity Quantum Electrodynamics and Spin–Photon Interactions via QED-DFT methods</li>
-            </ul>
+    <!-- Main Content -->
+    <main class="container">
+        <!-- About Section -->
+        <section aria-labelledby="about-heading">
+            <h2 id="about-heading">About</h2>
+            <p class="lead">
+                I'm an early-stage independent researcher from Bangladesh, passionate about quantum materials and nanoscale phenomena. My work aims to understand the physical properties of nanomaterials through first-principles calculations, exploring how atomically thin structures can lead to new opportunities in electronics, photonics, and information functionalities.
+            </p>
+            <p>
+                I'm particularly interested in how spins, light, and topology interconnect at the subatomic level, and how we can harness these aspects for future technologies.
+            </p>
         </section>
-
-        <section id="books">
-            <h2>Academic Books That Influenced Me</h2>
-            <ul class="publication-list">
-                <li>
-                    <cite><em>Molecular Quantum Mechanics</em> – Atkins & Friedman</cite>
-                    <p><small>This text helped me build a foundational understanding of atomic-level interactions, their interpretations, and the conceptual basis of various approximation theories.
-                    Key concepts that I have applied in my research can be found <a href="/retrospective/"><em>here</em></a>.</small></p>
-                </li>
-                <li>
-                    <cite><em>Quantum Transport: Atom to Transistor</em> – Supriyo Datta</cite>
-                    <p><small>I have tried to learn NEGF theory from this book. Although dated, I chose it for its simpler but precise explanations, many figures, and intuitive approach to describe transport properties.</small></p>
-                </li>
-                <li>
-                    <cite><em>Topological Quantum Materials: Concepts, Models, and Phenomena</em> – Grigory Tkachov</cite>
-                    <p><small>I found this book very effective for self-study because the author creates an intuitive scenario before starting any detailed explanation. So, in my opinion, if anyone has the least understandings of general concepts like invariants, band inversion mechanisms, and Berry curvature; then it's a very good book to learn about topological insulators, transport theory in disordered materials, and the origin of Majorana zero modes from very scratch.</small></p>
-                </li>
-                <li>
-                    <cite><em>Quantum Field Theory for the Gifted Amateur</em> – Lancaster & Blundell</cite>
-                    <p><small>I just started reading it to pass the time during a major power blackout when my phones were dead. I was really amazed at how such intricate concepts could be explained in a conversational narrative. Topics like propagators, statistical mechanics, Klein-Gordon equations, and cavity dynamics were the main topics I mostly tried to understand.</small></p>
-                </li>
-            </ul>
+        
+        <!-- Research Interests -->
+        <section aria-labelledby="interests-heading">
+            <h2 id="interests-heading">Research Interests</h2>
+            
+            <div class="content-group">
+                <h3>Current Focus</h3>
+                <ul class="interest-list">
+                    <li>Spin-dynamics in low-dimensional materials (2D monolayers, quantum dots, TM-based compounds)</li>
+                    <li>Nonlinear optics in noncentrosymmetric systems</li>
+                    <li>Density Functional Theory (DFT) and computational physics methods</li>
+                    <li>Doping, defects, and surface-induced disorder in 2D flakes</li>
+                </ul>
+            </div>
+            
+            <div class="content-group">
+                <h3>Future Directions</h3>
+                <ul class="interest-list">
+                    <li>Real-space topological features of confined materials</li>
+                    <li>Cavity quantum electrodynamics and spin–photon interactions via QED-DFT methods</li>
+                </ul>
+            </div>
         </section>
-
-        <section id="literatures">
-            <h2>Scientific Literatures That Shaped My Thinking</h2>
-            <ul class="publication-list">
-                <li>
-                    <cite><em>Jiang, Xue, et al. "Recent progress on 2D magnets: Fundamental mechanism, structural design and modification." Applied Physics Reviews 8.3 (2021).</em>, Phys. Rev. (2010)</cite>
-                    <p><small>Helped me to understand the characterization of intrinsic magnetism and defect-induced magnetizations.</small></p>
-                </li>
-                <li>
-                    <cite><em>De Bernardis, Daniele, Alberto Mercurio, and Simone De Liberato. "Tutorial on nonperturbative cavity quantum electrodynamics: is the Jaynes–Cummings model still relevant?." Journal of the Optical Society of America B 41.8 (2024): C206-C221.</em></cite>
-                    <p><small>Although currently I don't have sufficient expertise, this literature makes me very curious to study spin-photon coupling with QED-DFT based approach.</small></p>
-                </li>
-            </ul>
+        
+        <!-- Books Section -->
+        <section aria-labelledby="books-heading">
+            <h2 id="books-heading">Influential Books</h2>
+            
+            <div class="reading-list">
+                <article class="reading-item">
+                    <h4 class="reading-title">Molecular Quantum Mechanics</h4>
+                    <p class="reading-meta">Atkins & Friedman</p>
+                    <p class="reading-note">
+                        Built my foundational understanding of atomic-level interactions and approximation theories. 
+                        <a href="/retrospective/">Key concepts applied in my research</a>.
+                    </p>
+                </article>
+                
+                <article class="reading-item">
+                    <h4 class="reading-title">Quantum Transport: Atom to Transistor</h4>
+                    <p class="reading-meta">Supriyo Datta</p>
+                    <p class="reading-note">
+                        My introduction to NEGF theory. Chosen for its precise explanations, abundant figures, and intuitive approach to transport properties.
+                    </p>
+                </article>
+                
+                <article class="reading-item">
+                    <h4 class="reading-title">Topological Quantum Materials</h4>
+                    <p class="reading-meta">Grigory Tkachov</p>
+                    <p class="reading-note">
+                        Exceptional for self-study—creates intuitive scenarios before detailed explanations. Excellent for understanding topological insulators, disordered transport, and Majorana zero modes from first principles.
+                    </p>
+                </article>
+                
+                <article class="reading-item">
+                    <h4 class="reading-title">Quantum Field Theory for the Gifted Amateur</h4>
+                    <p class="reading-meta">Lancaster & Blundell</p>
+                    <p class="reading-note">
+                        Discovered during a power blackout. Amazed by how intricate concepts could be explained conversationally. Focused on propagators, statistical mechanics, Klein-Gordon equations, and cavity dynamics.
+                    </p>
+                </article>
+            </div>
+        </section>
+        
+        <!-- Literature Section -->
+        <section aria-labelledby="literature-heading">
+            <h2 id="literature-heading">Pivotal Literature</h2>
+            
+            <div class="reading-list">
+                <article class="reading-item">
+                    <h4 class="reading-title">Recent Progress on 2D Magnets</h4>
+                    <p class="reading-meta">Jiang, Xue, et al. <em>Applied Physics Reviews</em> 8.3 (2021)</p>
+                    <p class="reading-note">
+                        Fundamental understanding of intrinsic magnetism and defect-induced magnetizations in low-dimensional systems.
+                    </p>
+                </article>
+                
+                <article class="reading-item">
+                    <h4 class="reading-title">Tutorial on Nonperturbative Cavity Quantum Electrodynamics</h4>
+                    <p class="reading-meta">De Bernardis, Mercurio & De Liberato. <em>JOSA B</em> 41.8 (2024)</p>
+                    <p class="reading-note">
+                        Sparked my curiosity about spin-photon coupling through QED-DFT approaches—a direction I hope to pursue as my expertise develops.
+                    </p>
+                </article>
+            </div>
         </section>
     </main>
-
+    
+    <!-- Footer -->
     <footer>
-    <p>© 2025 Saraf Mohaimen Chowdhury | <a href="/colophon/">Colophon</a> | My Local Time: <span id="bd-time"></span></p>
+        <div class="container footer-content">
+            <p>&copy; 2025 Saraf Mohaimen Chowdhury</p>
+            <div class="footer-links">
+                <a href="/colophon/">Colophon</a>
+                <span class="time-display" id="bd-time"></span>
+            </div>
+        </div>
     </footer>
     
+    <!-- Scripts -->
     <script>
+        // Bangladesh Time
         function updateBDTime() {
             const now = new Date();
-            const bdOptions = {
+            const options = {
                 timeZone: 'Asia/Dhaka',
-                hour12: false, 
+                hour12: false,
                 hour: '2-digit',
-                minute: '2-digit',
-                second: '2-digit'
+                minute: '2-digit'
             };
-            document.getElementById('bd-time').textContent = now.toLocaleTimeString('en-US', bdOptions);
+            document.getElementById('bd-time').textContent = 
+                now.toLocaleTimeString('en-US', options) + ' BST';
         }
         updateBDTime();
-        setInterval(updateBDTime, 1000); 
-    </script>
-
-    
-    <script>
+        setInterval(updateBDTime, 60000);
+        
+        // Navigation & Theme
         document.addEventListener('DOMContentLoaded', function() {
-            // Mobile Navigation Toggle
             const navToggle = document.querySelector('.nav-toggle');
-            const navUl = document.querySelector('nav ul');
-
-            if (navToggle && navUl) {
+            const navList = document.querySelector('.nav-list');
+            
+            if (navToggle && navList) {
                 navToggle.addEventListener('click', function() {
-                    navUl.classList.toggle('active');
+                    const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+                    navToggle.setAttribute('aria-expanded', !isExpanded);
+                    navList.classList.toggle('active');
+                    navToggle.textContent = isExpanded ? 'Menu' : 'Close';
                 });
             }
-
-            // Theme Toggle
+            
             const themeToggle = document.querySelector('.theme-toggle');
-            if (themeToggle) {
-                themeToggle.addEventListener('click', function() {
-                    document.body.classList.toggle('dark-mode');
-                    themeToggle.textContent = document.body.classList.contains('dark-mode') ? '🌙' : '☀️';
-                    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-                });
-                if (localStorage.getItem('theme') === 'dark') {
-                    document.body.classList.add('dark-mode');
-                    themeToggle.textContent = '🌙';
-                }
+            const themeIcon = document.querySelector('.theme-icon');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const storedTheme = localStorage.getItem('theme');
+            
+            if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
+                document.body.classList.add('dark-mode');
+                themeIcon.textContent = '🌙';
             }
+            
+            themeToggle.addEventListener('click', function() {
+                document.body.classList.toggle('dark-mode');
+                const isDark = document.body.classList.contains('dark-mode');
+                themeIcon.textContent = isDark ? '🌙' : '☀️';
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            });
         });
     </script>
 </body>
