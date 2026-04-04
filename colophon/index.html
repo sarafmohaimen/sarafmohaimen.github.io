@@ -1,109 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XDLQ8RS51Q"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XDLQ8RS51Q');
-  </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Colophon – Saraf Mohaimen Chowdhury</title>
-  <meta name="description" content="Technical details and design notes about this website">
-  <link rel="stylesheet" href="/style.css">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XDLQ8RS51Q"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XDLQ8RS51Q');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colophon - Saraf Mohaimen Chowdhury</title>
+    <meta name="description" content="Technical details and design notes about this website.">
+    
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-
-  <header>
-    <h1>Saraf Mohaimen Chowdhury</h1>
-    <p class="header-subtitle">Early-Stage Researcher in Quantum Materials and Nanoelectronics</p>
-    <p class="header-location">Chattogram, Bangladesh</p>
-    <button class="theme-toggle" aria-label="Toggle dark mode">☀️</button>
-    <button class="nav-toggle" aria-label="Toggle navigation">Menu ☰</button>
-    <nav role="navigation">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/overview/">Overview</a></li>
-        <li><a href="/publications/">Publications</a></li>
-        <li><a href="/projects/">Projects</a></li>
-        <li><a href="/gear/">Gear</a></li>
-        <li><a href="/profiles/">Profiles</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main style="max-width: 640px; margin: 4rem auto; padding: 0 1.5rem;">
-      <h2>Colophon</h2>
-      
-      <p style="font-size: 1.00em; color: var(--text-secondary, #666); margin: 0.5rem 0 1.5rem; font-style: italic;">
-          This website was first published on May 10, 2025
-      </p>
-     
-      <p>This site is hand-written static HTML and CSS, deliberately lightweight and framework-free.</p>
-      <ul style="line-height: 1.7; margin: 1.2rem 0;">
-        <li><strong>Hosting</strong> — GitHub Pages</li>
-        <li><strong>Body typeface</strong> — Merriweather (Google Fonts) with Georgia fallback</li>
-        <li><strong>Colours & dark mode</strong> — CSS custom properties, toggled via a single class on &lt;body&gt;</li>
-        <li><strong>No build tools</strong> — plain .html and .css files, edited in VS Code</li>
-        <li><strong>JavaScript</strong> — minimal vanilla scripts for dark-mode toggle, mobile menu, and the local-time clock</li>
-        <li><strong>Philosophy</strong> — fast, readable on any device, works without JavaScript, looks decent with CSS disabled</li>
-        <li><strong>Thanks to</strong> — Grok (xAI) for design suggestions</li>
-        <li>A few Memes that describe my current research journey: <a href="https://drive.google.com/drive/folders/1TixMF8zbkudIQSh59MNetPFMD98HZlLL?usp=sharing" target="_blank" rel="noopener" onclick="goatcounter.count({ path: '/click/sorrowmemes-link' })">Sad research memes</a></li>
-      </ul>
-      
-      <p style="font-size: 1.00em; color: var(--text-secondary, #666); margin-top: 2rem;">
-          Small updates are included as required.
-      </p>
-  </main>
-  <footer>
-    <p>© 2025 Saraf Mohaimen Chowdhury | <a href="/colophon/">Colophon</a> | My Local Time: <span id="bd-time"></span></p>
-  </footer>
-
-  
-  <script>
-    function updateBDTime() {
-      const now = new Date();
-      const bdOptions = { timeZone: 'Asia/Dhaka', hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' };
-      document.getElementById('bd-time').textContent = now.toLocaleTimeString('en-US', bdOptions);
-    }
-    updateBDTime();
-    setInterval(updateBDTime, 1000);
-  </script>
-
- 
-  <script>
-    const options = { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'Asia/Dhaka' };
-    const today = new Date().toLocaleDateString('en-GB', options);  
-    document.addEventListener('DOMContentLoaded', () => {
-      const el = document.getElementById('last-updated');
-      if (el) el.textContent = today;
-    });
-  </script>
-
-  
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const navToggle = document.querySelector('.nav-toggle');
-      const navUl = document.querySelector('nav ul');
-      if (navToggle && navUl) {
-        navToggle.addEventListener('click', () => navUl.classList.toggle('active'));
-      }
-
-      const themeToggle = document.querySelector('.theme-toggle');
-      if (themeToggle) {
-        themeToggle.addEventListener('click', function() {
-          document.body.classList.toggle('dark-mode');
-          themeToggle.textContent = document.body.classList.contains('dark-mode') ? '🌙' : '☀️';
-          localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-        });
-        if (localStorage.getItem('theme') === 'dark') {
-          document.body.classList.add('dark-mode');
-          themeToggle.textContent = '🌙';
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" aria-label="Toggle dark mode">
+        <span class="theme-icon">☀️</span>
+    </button>
+    
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div>
+                <h1 class="header-title">Saraf Mohaimen Chowdhury</h1>
+                <p class="header-subtitle">Quantum Materials & Low-Dimensional Nanoelectronics</p>
+            </div>
+        </div>
+        
+        <nav class="container" role="navigation" aria-label="Main navigation">
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+            <ul class="nav-list">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/overview/" class="nav-link">Overview</a></li>
+                <li><a href="/publications/" class="nav-link">Publications</a></li>
+                <li><a href="/projects/" class="nav-link">Projects</a></li>
+                <li><a href="/gear/" class="nav-link">Gear</a></li>
+                <li><a href="/profiles/" class="nav-link">Profiles</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="container narrow">
+        <section aria-labelledby="colophon-heading">
+            <h2 id="colophon-heading">Colophon</h2>
+            
+            <p class="meta-note">
+                First published on May 10, 2025
+            </p>
+            
+            <div class="colophon-content">
+                <p>
+                    This site is hand-written static HTML and CSS, deliberately lightweight and framework-free.
+                </p>
+                
+                <dl class="tech-specs">
+                    <dt>Hosting</dt>
+                    <dd>GitHub Pages</dd>
+                    
+                    <dt>Typography</dt>
+                    <dd>System font stack with optimized fallbacks</dd>
+                    
+                    <dt>Colors & Dark Mode</dt>
+                    <dd>CSS custom properties, toggled via class on <code>&lt;body&gt;</code></dd>
+                    
+                    <dt>Build Tools</dt>
+                    <dd>None—plain .html and .css files, edited in VS Code</dd>
+                    
+                    <dt>JavaScript</dt>
+                    <dd>Minimal vanilla scripts for theme toggle, mobile menu, and local-time clock</dd>
+                    
+                    <dt>Philosophy</dt>
+                    <dd>Fast, readable on any device, works without JavaScript, looks decent with CSS disabled</dd>
+                    
+                    <dt>Design</dt>
+                    <dd>Modernized with assistance from Claude (Anthropic)</dd>
+                </dl>
+                
+                <div class="meme-link">
+                    <a href="https://drive.google.com/drive/folders/1TixMF8zbkudIQSh59MNetPFMD98HZlLL?usp=sharing" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       onclick="if(window.goatcounter)goatcounter.count({path:'/click/sorrowmemes-link'})">
+                        Research journey memes ↗
+                    </a>
+                </div>
+                
+                <p class="meta-note">
+                    Small updates are included as required.
+                </p>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2025 Saraf Mohaimen Chowdhury</p>
+            <div class="footer-links">
+                <a href="/colophon/">Colophon</a>
+                <span class="time-display" id="bd-time"></span>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script>
+        // Bangladesh Time
+        function updateBDTime() {
+            const now = new Date();
+            const options = {
+                timeZone: 'Asia/Dhaka',
+                hour12: false,
+                hour: '2-digit',
+                minute: '2-digit'
+            };
+            document.getElementById('bd-time').textContent = 
+                now.toLocaleTimeString('en-US', options) + ' BST';
         }
-      }
-    });
-  </script>
+        updateBDTime();
+        setInterval(updateBDTime, 60000);
+        
+        // Navigation & Theme
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navList = document.querySelector('.nav-list');
+            
+            if (navToggle && navList) {
+                navToggle.addEventListener('click', function() {
+                    const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+                    navToggle.setAttribute('aria-expanded', !isExpanded);
+                    navList.classList.toggle('active');
+                    navToggle.textContent = isExpanded ? 'Menu' : 'Close';
+                });
+            }
+            
+            const themeToggle = document.querySelector('.theme-toggle');
+            const themeIcon = document.querySelector('.theme-icon');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const storedTheme = localStorage.getItem('theme');
+            
+            if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
+                document.body.classList.add('dark-mode');
+                themeIcon.textContent = '🌙';
+            }
+            
+            themeToggle.addEventListener('click', function() {
+                document.body.classList.toggle('dark-mode');
+                const isDark = document.body.classList.contains('dark-mode');
+                themeIcon.textContent = isDark ? '🌙' : '☀️';
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            });
+        });
+    </script>
+    
+    <!-- GoatCounter -->
+    <script data-goatcounter="https://sarafmohaimen.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
