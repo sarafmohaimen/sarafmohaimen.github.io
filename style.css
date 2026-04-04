@@ -861,3 +861,131 @@ footer {
         gap: 0.25rem;
     }
 }
+
+/* ============================================
+   Colophon
+   ============================================ */
+
+.narrow {
+    max-width: 640px;
+}
+
+.meta-note {
+    font-size: 0.9375rem;
+    color: var(--color-text-secondary);
+    font-style: italic;
+    margin-bottom: var(--space-lg);
+}
+
+.colophon-content {
+    margin-top: var(--space-lg);
+}
+
+.colophon-content > p {
+    margin-bottom: var(--space-md);
+}
+
+/* Technical Specs Definition List */
+.tech-specs {
+    margin: var(--space-lg) 0;
+}
+
+.tech-specs dt {
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-secondary);
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-xs);
+}
+
+.tech-specs dd {
+    font-size: 0.9375rem;
+    color: var(--color-text);
+    margin-left: 0;
+    line-height: 1.5;
+}
+
+.tech-specs code {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    background-color: var(--color-surface);
+    padding: 0.125rem 0.375rem;
+    border: 1px solid var(--color-border);
+}
+
+/* Meme Link */
+.meme-link {
+    margin: var(--space-xl) 0;
+    padding: var(--space-md) 0;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.meme-link a {
+    font-size: 0.9375rem;
+    color: var(--color-accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color var(--transition-fast);
+}
+
+.meme-link a:hover {
+    border-bottom-color: var(--color-accent);
+}
+
+/* ============================================
+   Retrospective
+   ============================================ */
+
+.attribution {
+    margin: var(--space-lg) 0;
+    padding: var(--space-md) 0;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.attribution p {
+    font-size: 0.9375rem;
+    color: var(--color-text-secondary);
+    font-style: italic;
+}
+
+.attribution cite {
+    font-style: normal;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.foundation-list {
+    list-style: none;
+    padding: 0;
+    margin-top: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.foundation-item {
+    border-left: 2px solid var(--color-border);
+    padding-left: var(--space-md);
+    transition: border-color var(--transition-fast);
+}
+
+.foundation-item:hover {
+    border-left-color: var(--color-accent);
+}
+
+.foundation-item h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: var(--space-xs);
+    letter-spacing: -0.01em;
+}
+
+.foundation-item p {
+    font-size: 0.9375rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
