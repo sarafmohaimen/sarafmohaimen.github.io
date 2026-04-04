@@ -1,118 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XDLQ8RS51Q"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XDLQ8RS51Q');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XDLQ8RS51Q');
     </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tools & Software I Use - Saraf Mohaimen Chowdhury</title>
+    <title>Tools & Software - Saraf Mohaimen Chowdhury</title>
+    <meta name="description" content="Computational tools and software used for quantum materials research.">
+    
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" aria-label="Toggle dark mode">
+        <span class="theme-icon">☀️</span>
+    </button>
+    
+    <!-- Header -->
     <header>
-        <h1>Saraf Mohaimen Chowdhury</h1>
-        <p class="header-subtitle">Early-Stage Researcher in Quantum Materials and Nanoelectronics</p>
-        <p class="header-location">Chattogram, Bangladesh</p>
-        <button class="theme-toggle" aria-label="Toggle dark mode">☀️</button>
-        <button class="nav-toggle" aria-label="Toggle navigation">Menu ☰</button>
-        <nav role="navigation">
-            <ul>
-                <li><a href="/">Home</a></li> 
-                <li><a href="/overview/">Overview</a></li>
-                <li><a href="/publications/">Publications</a></li>
-                <li><a href="/projects/">Projects</a></li>
-                <li><a href="/gear/">Gear</a></li> 
-                <li><a href="/profiles/">Profiles</a></li>
+        <div class="container header-content">
+            <div>
+                <h1 class="header-title">Saraf Mohaimen Chowdhury</h1>
+                <p class="header-subtitle">Quantum Materials & Low-Dimensional Nanoelectronics</p>
+            </div>
+        </div>
+        
+        <nav class="container" role="navigation" aria-label="Main navigation">
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+            <ul class="nav-list">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/overview/" class="nav-link">Overview</a></li>
+                <li><a href="/publications/" class="nav-link">Publications</a></li>
+                <li><a href="/projects/" class="nav-link">Projects</a></li>
+                <li><a href="/gear/" class="nav-link" aria-current="page">Gear</a></li>
+                <li><a href="/profiles/" class="nav-link">Profiles</a></li>
             </ul>
         </nav>
     </header>
-
-    <main>
-        <section id="tools">
-            <h2>Tools & Software I Use</h2>
-            <p>I use a mix of computational programs, post-processing tools, and visualization software to study nanoscale systems.</p>
-            <ul class="publication-list">
-                <li>
-                    <strong>DFT Packages</strong>
-                    <p><em>Gaussian, PySCF, DMol3, VASP, Quantum ESPRESSO</em><br>Used for non-periodic/periodic systems, structural optimization, spin-resolved properties, wavefunction analysis, optical and excitonic properties in low-dimensional materials.</p>
-                </li>
-                <li>
-                    <strong>Quantum Transport Simulations</strong>
-                    <p><em>TranSIESTA, NEGF formalism</em><br>Used to investigate charge/spin transport in nanoelectronic and spintronic devices, modeling current–voltage characteristics under quantum coherent conditions.</p>
-                </li>
-                <li>
-                    <strong>Visualization & Data Analysis</strong>
-                    <p><em>GaussView, Multiwfn, VESTA, Pymatgen, GaussSum</em><br>For visualizing molecular orbitals, DOS, spin density, charge density, and crystal structures.</p>
-                </li>
-                <li>
-                    <strong>Programming & Scripting</strong>
-                    <p><em>Python (NumPy, SciPy, Matplotlib, ASE), Julia, Mathematica/MATLAB</em><br>Used for data extraction, plotting, analytical solutions, and scripting parameter sweeps.</p>
-                </li>
-            </ul>
+    
+    <!-- Main Content -->
+    <main class="container">
+        <section aria-labelledby="tools-heading">
+            <h2 id="tools-heading">Tools & Software</h2>
+            <p class="lead">
+                A collection of computational programs, post-processing tools, and visualization software used to study nanoscale systems.
+            </p>
+            
+            <!-- DFT Packages -->
+            <div class="tool-category">
+                <h3>DFT Packages</h3>
+                <div class="tool-list">
+                    <span class="tool-name">Gaussian</span>
+                    <span class="tool-name">PySCF</span>
+                    <span class="tool-name">DMol3</span>
+                    <span class="tool-name">VASP</span>
+                    <span class="tool-name">Quantum ESPRESSO</span>
+                </div>
+                <p class="tool-description">
+                    Non-periodic and periodic systems, structural optimization, spin-resolved properties, wavefunction analysis, optical and excitonic properties in low-dimensional materials.
+                </p>
+            </div>
+            
+            <!-- Quantum Transport -->
+            <div class="tool-category">
+                <h3>Quantum Transport</h3>
+                <div class="tool-list">
+                    <span class="tool-name">TranSIESTA</span>
+                    <span class="tool-name">NEGF formalism</span>
+                </div>
+                <p class="tool-description">
+                    Charge and spin transport in nanoelectronic and spintronic devices, modeling current–voltage characteristics under quantum coherent conditions.
+                </p>
+            </div>
+            
+            <!-- Visualization -->
+            <div class="tool-category">
+                <h3>Visualization & Analysis</h3>
+                <div class="tool-list">
+                    <span class="tool-name">GaussView</span>
+                    <span class="tool-name">Multiwfn</span>
+                    <span class="tool-name">VESTA</span>
+                    <span class="tool-name">Pymatgen</span>
+                    <span class="tool-name">GaussSum</span>
+                </div>
+                <p class="tool-description">
+                    Molecular orbitals, density of states, spin density, charge density, and crystal structure visualization.
+                </p>
+            </div>
+            
+            <!-- Programming -->
+            <div class="tool-category">
+                <h3>Programming & Scripting</h3>
+                <div class="tool-list">
+                    <span class="tool-name">Python</span>
+                    <span class="tool-tag">NumPy</span>
+                    <span class="tool-tag">SciPy</span>
+                    <span class="tool-tag">Matplotlib</span>
+                    <span class="tool-tag">ASE</span>
+                    <span class="tool-name">Julia</span>
+                    <span class="tool-name">Mathematica</span>
+                    <span class="tool-name">MATLAB</span>
+                </div>
+                <p class="tool-description">
+                    Data extraction, plotting, analytical solutions, and scripting parameter sweeps.
+                </p>
+            </div>
         </section>
     </main>
-
+    
+    <!-- Footer -->
     <footer>
-    <p>© 2025 Saraf Mohaimen Chowdhury | <a href="/colophon/">Colophon</a> | My Local Time: <span id="bd-time"></span></p>
+        <div class="container footer-content">
+            <p>&copy; 2025 Saraf Mohaimen Chowdhury</p>
+            <div class="footer-links">
+                <a href="/colophon/">Colophon</a>
+                <span class="time-display" id="bd-time"></span>
+            </div>
+        </div>
     </footer>
     
+    <!-- Scripts -->
     <script>
+        // Bangladesh Time
         function updateBDTime() {
             const now = new Date();
-            const bdOptions = {
+            const options = {
                 timeZone: 'Asia/Dhaka',
-                hour12: false, 
+                hour12: false,
                 hour: '2-digit',
-                minute: '2-digit',
-                second: '2-digit'
+                minute: '2-digit'
             };
-            document.getElementById('bd-time').textContent = now.toLocaleTimeString('en-US', bdOptions);
+            document.getElementById('bd-time').textContent = 
+                now.toLocaleTimeString('en-US', options) + ' BST';
         }
         updateBDTime();
-        setInterval(updateBDTime, 1000); 
-    </script>
-    
-
-    <script>
+        setInterval(updateBDTime, 60000);
+        
+        // Navigation & Theme
         document.addEventListener('DOMContentLoaded', function() {
-            // Mobile Navigation Toggle
             const navToggle = document.querySelector('.nav-toggle');
-            const navUl = document.querySelector('nav ul');
-
-            if (navToggle && navUl) {
+            const navList = document.querySelector('.nav-list');
+            
+            if (navToggle && navList) {
                 navToggle.addEventListener('click', function() {
-                    navUl.classList.toggle('active');
+                    const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+                    navToggle.setAttribute('aria-expanded', !isExpanded);
+                    navList.classList.toggle('active');
+                    navToggle.textContent = isExpanded ? 'Menu' : 'Close';
                 });
             }
-
-            // Theme Toggle
+            
             const themeToggle = document.querySelector('.theme-toggle');
-            if (themeToggle) {
-                themeToggle.addEventListener('click', function() {
-                    document.body.classList.toggle('dark-mode');
-                    themeToggle.textContent = document.body.classList.contains('dark-mode') ? '🌙' : '☀️';
-                    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-                });
-                if (localStorage.getItem('theme') === 'dark') {
-                    document.body.classList.add('dark-mode');
-                    themeToggle.textContent = '🌙';
-                }
+            const themeIcon = document.querySelector('.theme-icon');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const storedTheme = localStorage.getItem('theme');
+            
+            if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
+                document.body.classList.add('dark-mode');
+                themeIcon.textContent = '🌙';
             }
+            
+            themeToggle.addEventListener('click', function() {
+                document.body.classList.toggle('dark-mode');
+                const isDark = document.body.classList.contains('dark-mode');
+                themeIcon.textContent = isDark ? '🌙' : '☀️';
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            });
         });
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
