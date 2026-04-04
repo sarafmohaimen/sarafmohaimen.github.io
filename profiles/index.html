@@ -1,124 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XDLQ8RS51Q"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XDLQ8RS51Q');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XDLQ8RS51Q');
     </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connections - Saraf Mohaimen Chowdhury</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Contact & Profiles - Saraf Mohaimen Chowdhury</title>
+    <meta name="description" content="Contact information and professional profiles of Saraf Mohaimen Chowdhury.">
+    
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" aria-label="Toggle dark mode">
+        <span class="theme-icon">☀️</span>
+    </button>
+    
+    <!-- Header -->
     <header>
-        <h1>Saraf Mohaimen Chowdhury</h1>
-        <p class="header-subtitle">Early-Stage Researcher in Quantum Materials and Nanoelectronics</p>
-        <p class="header-location">Chattogram, Bangladesh</p>
-        <button class="theme-toggle" aria-label="Toggle dark mode">☀️</button>
-        <button class="nav-toggle" aria-label="Toggle navigation">Menu ☰</button>
-        <nav role="navigation">
-            <ul>
-                <li><a href="/">Home</a></li> 
-                <li><a href="/overview/">Overview</a></li>
-                <li><a href="/publications/">Publications</a></li>
-                <li><a href="/projects/">Projects</a></li>
-                <li><a href="/gear/">Gear</a></li> 
-                <li><a href="/profiles/">Profiles</a></li>
+        <div class="container header-content">
+            <div>
+                <h1 class="header-title">Saraf Mohaimen Chowdhury</h1>
+                <p class="header-subtitle">Quantum Materials & Low-Dimensional Nanoelectronics</p>
+            </div>
+        </div>
+        
+        <nav class="container" role="navigation" aria-label="Main navigation">
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+            <ul class="nav-list">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/overview/" class="nav-link">Overview</a></li>
+                <li><a href="/publications/" class="nav-link">Publications</a></li>
+                <li><a href="/projects/" class="nav-link">Projects</a></li>
+                <li><a href="/gear/" class="nav-link">Gear</a></li>
+                <li><a href="/profiles/" class="nav-link" aria-current="page">Profiles</a></li>
             </ul>
         </nav>
     </header>
-
-    <main>
-    <section id="contact">
-        <h2>Contact & Links</h2>
-        <ul>
-            <li><strong>Curriculum Vitae:</strong> My CV is available <a href="https://drive.google.com/uc?export=download&id=1piINv7TUO8ZIfz4y84K_JPnYVViLYF03" target="_blank" rel="noopener" onclick="goatcounter.count({ path: '/click/cv-download-link' })">here</a>.</li>
-            <li><strong>Professional Email:</strong> <a href="mailto:sarafmohaimen.chowdhury@gmail.com" aria-label="Email Saraf Mohaimen Chowdhury">sarafmohaimen.chowdhury@gmail.com</a></li>
-            <li><strong>ORCID:</strong> <a href="https://orcid.org/0009-0006-7351-4573" target="_blank" rel="noopener noreferrer" aria-label="Visit Saraf Mohaimen Chowdhury's ORCID Profile"
-                                            onclick="goatcounter.count({ path: '/click/abstract-drive-link-ORCID' })">https://orcid.org/0009-0006-7351-4573</a></li>
-            <li><strong>Web of Science:</strong> <a href="https://www.webofscience.com/wos/author/record/NFT-9432-2025" target="_blank" rel="noopener noreferrer" aria-label="Visit Saraf Mohaimen Chowdhury's WoS Profile"
-                                            onclick="goatcounter.count({ path: '/click/abstract-drive-link-WoS' })">https://www.webofscience.com/wos/author/record/NFT-9432-2025</a></li>
-            <li><strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?hl=en&user=c11PODUAAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Visit Saraf Mohaimen Chowdhury's Google Scholar ID"
-                                            onclick="goatcounter.count({ path: '/click/GoogleScholarID' })">https://scholar.google.com/citations?hl=en&user=c11PODUAAAAJ</a></li>
-            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/saraf-mohaimen-chowdhury-nirjhor-b5068018b" target="_blank" rel="noopener noreferrer" aria-label="View Saraf Mohaimen Chowdhury's LinkedIn profile"
-                                               onclick="goatcounter.count({ path: '/click/abstract-drive-link-LinkedIn' })">https://www.linkedin.com/in/saraf-mohaimen-chowdhury-nirjhor-b5068018b</a></li>
-            <li><strong>Poetry Website:</strong> Apart from doing science, I like to craft verses in quiet moments. For verses that didn’t make it into the research papers, visit 
-                <a href="https://mohaimennirjhor.wordpress.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Saraf Mohaimen Chowdhury's poetry website"
-                    onclick="goatcounter.count({ path: '/click/abstract-drive-link-Poetry' })">https://mohaimennirjhor.wordpress.com/</a></li>
-        </ul>
+    
+    <!-- Main Content -->
+    <main class="container">
+        <section aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact & Profiles</h2>
+            
+            <!-- Direct Contact -->
+            <div class="contact-group">
+                <h3>Direct Contact</h3>
+                <div class="contact-item">
+                    <a href="https://drive.google.com/uc?export=download&id=1piINv7TUO8ZIfz4y84K_JPnYVViLYF03" 
+                       class="contact-link contact-primary" 
+                       target="_blank" 
+                       rel="noopener"
+                       onclick="if(window.goatcounter)goatcounter.count({path:'/click/cv-download-link'})">
+                        Download CV
+                    </a>
+                </div>
+                <div class="contact-item">
+                    <a href="mailto:sarafmohaimen.chowdhury@gmail.com" 
+                       class="contact-link"
+                       aria-label="Email Saraf Mohaimen Chowdhury">
+                        sarafmohaimen.chowdhury@gmail.com
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Academic Profiles -->
+            <div class="contact-group">
+                <h3>Academic Profiles</h3>
+                <ul class="profile-list">
+                    <li>
+                        <a href="https://orcid.org/0009-0006-7351-4573" 
+                           class="profile-link" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           onclick="if(window.goatcounter)goatcounter.count({path:'/click/abstract-drive-link-ORCID'})">
+                            <span class="profile-name">ORCID</span>
+                            <span class="profile-id">0009-0006-7351-4573</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.webofscience.com/wos/author/record/NFT-9432-2025" 
+                           class="profile-link" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           onclick="if(window.goatcounter)goatcounter.count({path:'/click/abstract-drive-link-WoS'})">
+                            <span class="profile-name">Web of Science</span>
+                            <span class="profile-id">NFT-9432-2025</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://scholar.google.com/citations?hl=en&user=c11PODUAAAAJ" 
+                           class="profile-link" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           onclick="if(window.goatcounter)goatcounter.count({path:'/click/GoogleScholarID'})">
+                            <span class="profile-name">Google Scholar</span>
+                            <span class="profile-id">c11PODUAAAAJ</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Professional & Personal -->
+            <div class="contact-group">
+                <h3>Professional & Personal</h3>
+                <ul class="profile-list">
+                    <li>
+                        <a href="https://www.linkedin.com/in/saraf-mohaimen-chowdhury-nirjhor-b5068018b" 
+                           class="profile-link" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           onclick="if(window.goatcounter)goatcounter.count({path:'/click/abstract-drive-link-LinkedIn'})">
+                            <span class="profile-name">LinkedIn</span>
+                            <span class="profile-id">Saraf Mohaimen Chowdhury</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://mohaimennirjhor.wordpress.com/" 
+                           class="profile-link profile-personal" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           onclick="if(window.goatcounter)goatcounter.count({path:'/click/abstract-drive-link-Poetry'})">
+                            <span class="profile-name">Poetry</span>
+                            <span class="profile-desc">Verses crafted in quiet moments</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
     </main>
-
+    
+    <!-- Footer -->
     <footer>
-        <p>© 2025 Saraf Mohaimen Chowdhury | <a href="/colophon/">Colophon</a> | My Local Time: <span id="bd-time"></span></p>
+        <div class="container footer-content">
+            <p>&copy; 2025 Saraf Mohaimen Chowdhury</p>
+            <div class="footer-links">
+                <a href="/colophon/">Colophon</a>
+                <span class="time-display" id="bd-time"></span>
+            </div>
+        </div>
     </footer>
     
+    <!-- Scripts -->
     <script>
+        // Bangladesh Time
         function updateBDTime() {
             const now = new Date();
-            const bdOptions = {
+            const options = {
                 timeZone: 'Asia/Dhaka',
-                hour12: false, 
+                hour12: false,
                 hour: '2-digit',
-                minute: '2-digit',
-                second: '2-digit'
+                minute: '2-digit'
             };
-            document.getElementById('bd-time').textContent = now.toLocaleTimeString('en-US', bdOptions);
+            document.getElementById('bd-time').textContent = 
+                now.toLocaleTimeString('en-US', options) + ' BST';
         }
         updateBDTime();
-        setInterval(updateBDTime, 1000); 
-    </script>
-    
-
-    <script>
+        setInterval(updateBDTime, 60000);
+        
+        // Navigation & Theme
         document.addEventListener('DOMContentLoaded', function() {
-            // Mobile Navigation Toggle
             const navToggle = document.querySelector('.nav-toggle');
-            const navUl = document.querySelector('nav ul');
-
-            if (navToggle && navUl) {
+            const navList = document.querySelector('.nav-list');
+            
+            if (navToggle && navList) {
                 navToggle.addEventListener('click', function() {
-                    navUl.classList.toggle('active');
+                    const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+                    navToggle.setAttribute('aria-expanded', !isExpanded);
+                    navList.classList.toggle('active');
+                    navToggle.textContent = isExpanded ? 'Menu' : 'Close';
                 });
             }
-
-            // Theme Toggle
+            
             const themeToggle = document.querySelector('.theme-toggle');
-            if (themeToggle) {
-                themeToggle.addEventListener('click', function() {
-                    document.body.classList.toggle('dark-mode');
-                    themeToggle.textContent = document.body.classList.contains('dark-mode') ? '🌙' : '☀️';
-                    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-                });
-                if (localStorage.getItem('theme') === 'dark') {
-                    document.body.classList.add('dark-mode');
-                    themeToggle.textContent = '🌙';
-                }
+            const themeIcon = document.querySelector('.theme-icon');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const storedTheme = localStorage.getItem('theme');
+            
+            if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
+                document.body.classList.add('dark-mode');
+                themeIcon.textContent = '🌙';
             }
+            
+            themeToggle.addEventListener('click', function() {
+                document.body.classList.toggle('dark-mode');
+                const isDark = document.body.classList.contains('dark-mode');
+                themeIcon.textContent = isDark ? '🌙' : '☀️';
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            });
         });
     </script>
+    
+    <!-- GoatCounter -->
     <script data-goatcounter="https://sarafmohaimen.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+            async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
