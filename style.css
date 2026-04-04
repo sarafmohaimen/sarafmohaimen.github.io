@@ -478,3 +478,76 @@ footer {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* Lead paragraph */
+.lead {
+    font-size: 1.125rem;
+    color: var(--color-text);
+    margin-bottom: var(--space-md);
+}
+
+/* Content groups within sections */
+.content-group {
+    margin-bottom: var(--space-lg);
+}
+
+.content-group h3 {
+    margin-bottom: var(--space-sm);
+}
+
+/* Interest lists */
+.interest-list {
+    list-style: none;
+    padding: 0;
+}
+
+.interest-list li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: var(--space-xs);
+    color: var(--color-text-secondary);
+}
+
+.interest-list li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+}
+
+/* Reading list (books/literature) */
+.reading-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.reading-item {
+    border-left: 2px solid var(--color-border);
+    padding-left: var(--space-md);
+}
+
+.reading-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 0.25rem;
+}
+
+.reading-meta {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    font-style: italic;
+    margin-bottom: var(--space-xs);
+}
+
+.reading-note {
+    font-size: 0.9375rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+.reading-note a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
