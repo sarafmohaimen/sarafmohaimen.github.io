@@ -551,3 +551,313 @@ footer {
     text-decoration: underline;
     text-underline-offset: 2px;
 }
+
+/* ============================================
+   Publications
+   ============================================ */
+
+.publication-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+}
+
+.publication-item {
+    border-left: 2px solid var(--color-border);
+    padding-left: var(--space-md);
+    transition: border-color var(--transition-fast);
+}
+
+.publication-item:hover {
+    border-left-color: var(--color-accent);
+}
+
+.publication-title {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--color-text);
+    line-height: 1.4;
+    margin-bottom: var(--space-xs);
+}
+
+.publication-authors {
+    font-size: 0.9375rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 0.25rem;
+}
+
+.publication-venue {
+    font-size: 0.9375rem;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-sm);
+}
+
+.publication-venue strong {
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+.publication-link {
+    font-size: 0.875rem;
+    font-family: var(--font-mono);
+    color: var(--color-accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color var(--transition-fast);
+}
+
+.publication-link:hover {
+    border-bottom-color: var(--color-accent);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .publication-list {
+        gap: var(--space-lg);
+    }
+    
+    .publication-title {
+        font-size: 1rem;
+    }
+}
+
+/* ============================================
+   Projects
+   ============================================ */
+
+.project-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.project-item {
+    border-left: 2px solid var(--color-border);
+    padding-left: var(--space-md);
+    transition: border-color var(--transition-fast);
+}
+
+.project-item:hover {
+    border-left-color: var(--color-accent);
+}
+
+.project-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-text);
+    margin-bottom: 0.25rem;
+}
+
+.project-note {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-xs);
+}
+
+.project-link {
+    font-size: 0.8125rem;
+    font-family: var(--font-mono);
+    color: var(--color-accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color var(--transition-fast);
+}
+
+.project-link:hover {
+    border-bottom-color: var(--color-accent);
+}
+
+/* Presentations */
+.presentation-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.presentation-item {
+    border-left: 2px solid var(--color-border);
+    padding-left: var(--space-md);
+}
+
+.presentation-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-text);
+    font-style: italic;
+}
+
+/* Section spacing */
+.content-group {
+    margin-bottom: var(--space-xl);
+}
+
+.content-group h3 {
+    margin-bottom: var(--space-md);
+    color: var(--color-text-secondary);
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* ============================================
+   Gear / Tools
+   ============================================ */
+
+.tool-category {
+    margin-bottom: var(--space-xl);
+    border-left: 2px solid var(--color-border);
+    padding-left: var(--space-md);
+    transition: border-color var(--transition-fast);
+}
+
+.tool-category:hover {
+    border-left-color: var(--color-accent);
+}
+
+.tool-category h3 {
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-sm);
+}
+
+.tool-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-sm);
+}
+
+.tool-name {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.tool-tag {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    background-color: transparent;
+    border: 1px solid var(--color-border);
+    font-size: 0.8125rem;
+    color: var(--color-text-secondary);
+    font-family: var(--font-mono);
+}
+
+.tool-description {
+    font-size: 0.9375rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    max-width: 60ch;
+}
+
+/* ============================================
+   Contact & Profiles
+   ============================================ */
+
+.contact-group {
+    margin-bottom: var(--space-xl);
+}
+
+.contact-group h3 {
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-md);
+}
+
+/* Direct Contact */
+.contact-item {
+    margin-bottom: var(--space-sm);
+}
+
+.contact-link {
+    display: inline-block;
+    font-size: 1rem;
+    color: var(--color-text);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 0.125rem;
+    transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.contact-link:hover {
+    color: var(--color-accent);
+    border-bottom-color: var(--color-accent);
+}
+
+.contact-primary {
+    font-weight: 600;
+    color: var(--color-accent);
+    border-bottom-color: var(--color-accent);
+}
+
+/* Profile List */
+.profile-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.profile-link {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: var(--space-sm) 0;
+    border-bottom: 1px solid var(--color-border);
+    text-decoration: none;
+    transition: border-color var(--transition-fast);
+}
+
+.profile-link:hover {
+    border-bottom-color: var(--color-accent);
+}
+
+.profile-link:hover .profile-name {
+    color: var(--color-accent);
+}
+
+.profile-name {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-text);
+    transition: color var(--transition-fast);
+}
+
+.profile-id {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+}
+
+.profile-desc {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    font-style: italic;
+}
+
+/* Personal link styling */
+.profile-personal .profile-name {
+    font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .profile-link {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+}
