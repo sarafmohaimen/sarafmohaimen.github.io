@@ -1,184 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XDLQ8RS51Q"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XDLQ8RS51Q');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XDLQ8RS51Q');
     </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publications - Saraf Mohaimen Chowdhury</title>
-    <link rel="stylesheet" href="/style.css"> 
+    <meta name="description" content="Peer-reviewed publications by Saraf Mohaimen Chowdhury in quantum materials and nanoelectronics.">
+    
+    <link rel="stylesheet" href="/style.css">
     <script defer data-domain="sarafmohaimen.github.io/publications" src="https://plausible.io/js/script.file-downloads.outbound-links.js"></script>
-    <style>
-        .publication-group {
-            margin-bottom: 2rem;
-        }
-        .publication-list {
-            list-style: none;
-            padding: 0;
-        }
-        .publication-list li {
-            margin-bottom: 2rem;
-            padding: 1rem;
-            border-left: 4px solid #007bff;
-            background-color: #f8f9fa;
-            border-radius: 4px;
-        }
-        .authors {
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-        }
-        .title {
-            font-style: italic;
-            font-size: 1rem;
-            color: #333;
-            margin-bottom: 0.75rem;
-            display: block;
-        }
-        .preview {
-            margin-bottom: 1rem;
-        }
-        .preview h4 {
-            font-size: 1rem;
-            color: #007bff;
-            margin-bottom: 0.5rem;
-        }
-        .preview ul {
-            list-style-type: disc;
-            padding-left: 1.5rem;
-            font-size: 0.95rem;
-            color: #444;
-        }
-        .preview li {
-            margin-bottom: 0.5rem;
-        }
-        .dates {
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 1rem;
-        }
-        .button {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background-color: #007bff;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: background-color 0.3s ease;
-        }
-        .button:hover {
-            background-color: #0056b3;
-        }
-        @media (max-width: 768px) {
-            .publication-list li {
-                padding: 0.75rem;
-            }
-            .authors, .title, .preview h4 {
-                font-size: 0.95rem;
-            }
-            .preview ul {
-                font-size: 0.9rem;
-            }
-            .button {
-                padding: 0.4rem 0.8rem;
-                font-size: 0.9rem;
-            }
-        }
-    </style>
 </head>
 <body>
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" aria-label="Toggle dark mode">
+        <span class="theme-icon">☀️</span>
+    </button>
+    
+    <!-- Header -->
     <header>
-        <h1>Saraf Mohaimen Chowdhury</h1>
-        <p class="header-subtitle">Early-Stage Researcher in Quantum Materials and Nanoelectronics</p>
-        <p class="header-location">Chattogram, Bangladesh</p>
-        <button class="theme-toggle" aria-label="Toggle dark mode">☀️</button>
-        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-        <nav role="navigation">
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/overview/">Overview</a></li>
-                <li><a href="/publications/">Publications</a></li>
-                <li><a href="/projects/">Projects</a></li>
-                <li><a href="/gear/">Gear</a></li> 
-                <li><a href="/profiles/">Profiles</a></li>
+        <div class="container header-content">
+            <div>
+                <h1 class="header-title">Saraf Mohaimen Chowdhury</h1>
+                <p class="header-subtitle">Quantum Materials & Low-Dimensional Nanoelectronics</p>
+            </div>
+        </div>
+        
+        <nav class="container" role="navigation" aria-label="Main navigation">
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+            <ul class="nav-list">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/overview/" class="nav-link">Overview</a></li>
+                <li><a href="/publications/" class="nav-link" aria-current="page">Publications</a></li>
+                <li><a href="/projects/" class="nav-link">Projects</a></li>
+                <li><a href="/gear/" class="nav-link">Gear</a></li>
+                <li><a href="/profiles/" class="nav-link">Profiles</a></li>
             </ul>
         </nav>
     </header>
-
-    <main>
-        <section id="publications">
-            <h2>Publications</h2>
-
-                    <div class="publication-group">
-                        <h3>Accepted & In Press</h3>
-                        <ul class="publication-list">
-                            <li>
-                                <p>
-                                  Chowdhury, S. M., Hossain, I., & Chowdhury, M. R. (2025). 
-                                  “Interstitial TM–P Pairing in P3-Coordinated Wide-Gap Quantum Dots:
-                                  Spin-Selective Insulating States and Enhanced Hyperpolarizability.”
-                                  <em>Nanoscale</em>. 
-                                  <a href="https://doi.org/10.1039/D5NR02041G"
-                                     target="_blank"
-                                     rel="noopener noreferrer"
-                                     onclick="goatcounter.count({ path: '/click/paper-journal-link-INTERSTITIAL' })">
-                                    https://doi.org/10.1039/D5NR02041G ↗
-                                  </a>
-                                </p>
-                        </div>
-                    </section>
-                </main>
-
+    
+    <!-- Main Content -->
+    <main class="container">
+        <section aria-labelledby="publications-heading">
+            <h2 id="publications-heading">Publications</h2>
+            
+            <div class="publication-list">
+                <!-- Publication 1 -->
+                <article class="publication-item">
+                    <h3 class="publication-title">
+                        Interstitial TM–P Pairing in P3-Coordinated Wide-Gap Quantum Dots: Spin-Selective Insulating States and Enhanced Hyperpolarizability
+                    </h3>
+                    <p class="publication-authors">
+                        Chowdhury, S. M., Hossain, I., & Chowdhury, M. R.
+                    </p>
+                    <p class="publication-venue">
+                        <strong>Nanoscale</strong>, 2026, 18, 2811–2829
+                    </p>
+                    <a href="https://doi.org/10.1039/D5NR02041G" 
+                       class="publication-link" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       onclick="if(window.goatcounter)goatcounter.count({path:'/click/paper-journal-link-INTERSTITIAL'})">
+                        DOI: 10.1039/D5NR02041G ↗
+                    </a>
+                </article>
+                
+                <!-- Publication 2 -->
+                <article class="publication-item">
+                    <h3 class="publication-title">
+                        Spin-Selective Orbital Reconfiguration and Colossal Nonlinear Anisotropy in Defect-Engineered Atomically Thin Quantum Dots
+                    </h3>
+                    <p class="publication-authors">
+                        Chowdhury, S. M., & Akther, S.
+                    </p>
+                    <p class="publication-venue">
+                        <strong>Materials Advances</strong>, 2026
+                    </p>
+                    <a href="https://doi.org/10.1039/D6MA00156D" 
+                       class="publication-link" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       onclick="if(window.goatcounter)goatcounter.count({path:'/click/paper-journal-link-ANISOTROPY'})">
+                        DOI: 10.1039/D6MA00156D ↗
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
     <footer>
-        <p>© 2025 Saraf Mohaimen Chowdhury | <a href="/colophon/">Colophon</a> | My Local Time: <span id="bd-time"></span></p>
+        <div class="container footer-content">
+            <p>&copy; 2025 Saraf Mohaimen Chowdhury</p>
+            <div class="footer-links">
+                <a href="/colophon/">Colophon</a>
+                <span class="time-display" id="bd-time"></span>
+            </div>
+        </div>
     </footer>
     
+    <!-- Scripts -->
     <script>
+        // Bangladesh Time
         function updateBDTime() {
             const now = new Date();
-            const bdOptions = {
+            const options = {
                 timeZone: 'Asia/Dhaka',
-                hour12: false, 
+                hour12: false,
                 hour: '2-digit',
-                minute: '2-digit',
-                second: '2-digit'
+                minute: '2-digit'
             };
-            document.getElementById('bd-time').textContent = now.toLocaleTimeString('en-US', bdOptions);
+            document.getElementById('bd-time').textContent = 
+                now.toLocaleTimeString('en-US', options) + ' BST';
         }
         updateBDTime();
-        setInterval(updateBDTime, 1000); 
-    </script>
-
-    <script>
+        setInterval(updateBDTime, 60000);
+        
+        // Navigation & Theme
         document.addEventListener('DOMContentLoaded', function() {
             const navToggle = document.querySelector('.nav-toggle');
-            const navUl = document.querySelector('nav ul');
-
-            if (navToggle && navUl) {
+            const navList = document.querySelector('.nav-list');
+            
+            if (navToggle && navList) {
                 navToggle.addEventListener('click', function() {
-                    navUl.classList.toggle('active');
+                    const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+                    navToggle.setAttribute('aria-expanded', !isExpanded);
+                    navList.classList.toggle('active');
+                    navToggle.textContent = isExpanded ? 'Menu' : 'Close';
                 });
             }
-
+            
             const themeToggle = document.querySelector('.theme-toggle');
-            if (themeToggle) {
-                themeToggle.addEventListener('click', function() {
-                    document.body.classList.toggle('dark-mode');
-                    themeToggle.textContent = document.body.classList.contains('dark-mode') ? '🌙' : '☀️';
-                    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-                });
-                if (localStorage.getItem('theme') === 'dark') {
-                    document.body.classList.add('dark-mode');
-                    themeToggle.textContent = '🌙';
-                }
+            const themeIcon = document.querySelector('.theme-icon');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const storedTheme = localStorage.getItem('theme');
+            
+            if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
+                document.body.classList.add('dark-mode');
+                themeIcon.textContent = '🌙';
             }
+            
+            themeToggle.addEventListener('click', function() {
+                document.body.classList.toggle('dark-mode');
+                const isDark = document.body.classList.contains('dark-mode');
+                themeIcon.textContent = isDark ? '🌙' : '☀️';
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            });
         });
     </script>
+    
+    <!-- GoatCounter -->
     <script data-goatcounter="https://sarafmohaimen.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+            async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
