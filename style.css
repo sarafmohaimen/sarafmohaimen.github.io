@@ -482,7 +482,7 @@ footer {
 /* Lead paragraph */
 .lead {
     font-size: 1.125rem;
-    color: var(--color-accent);
+    color: var(--color-text-secondary);
     margin-bottom: var(--space-md);
 }
 
