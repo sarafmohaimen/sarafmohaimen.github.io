@@ -81,7 +81,6 @@
                                      alt="Crystal structure showing P3-coordination environment" 
                                      class="figure-image"
                                      data-full="/F1.png">
-                                <div class="figure-caption">Crystal structure and P3-coordination environment</div>
                             </div>
                             <div class="figure-item" onclick="openLightbox(this)">
                                 <span class="figure-number">Fig. 2</span>
@@ -89,16 +88,14 @@
                                      alt="Spin-selective insulating states" 
                                      class="figure-image"
                                      data-full="/F2.png">
-                                <div class="figure-caption">Spin-selective insulating states in wide-gap regime</div>
-                            </div>
+                             </div>
                             <div class="figure-item" onclick="openLightbox(this)">
                                 <span class="figure-number">Fig. 3</span>
                                 <img src="/F3.png" 
                                      alt="Enhanced hyperpolarizability measurements" 
                                      class="figure-image"
-                                     data-full="/F3.png">
-                                <div class="figure-caption">Enhanced hyperpolarizability: theory vs experiment</div>
-                            </div>
+                                     data-full="/F3.jpg">
+                             </div>
                         </div>
                     </div>
                 </article>
@@ -211,9 +208,8 @@
         // Lightbox Functions
         function openLightbox(element) {
             const img = element.querySelector('.figure-image');
-            const caption = element.querySelector('.figure-caption').textContent;
             document.getElementById('lightbox-img').src = img.getAttribute('data-full');
-            document.getElementById('lightbox-caption').textContent = caption;
+            document.getElementById('lightbox-caption').textContent = '';
             document.getElementById('lightbox').classList.add('active');
             document.body.style.overflow = 'hidden';
         }
