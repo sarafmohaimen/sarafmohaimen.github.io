@@ -70,6 +70,37 @@
                        onclick="if(window.goatcounter)goatcounter.count({path:'/click/paper-journal-link-INTERSTITIAL'})">
                         DOI: 10.1039/D5NR02041G ↗
                     </a>
+                    
+                    <!-- Figures Section -->
+                    <div class="publication-figures">
+                        <div class="figures-header">Key Figures</div>
+                        <div class="figures-grid">
+                            <div class="figure-item" onclick="openLightbox(this)">
+                                <span class="figure-number">Fig. 1</span>
+                                <img src="/F1.png" 
+                                     alt="Crystal structure showing P3-coordination environment" 
+                                     class="figure-image"
+                                     data-full="/F1.png">
+                                <div class="figure-caption">Crystal structure and P3-coordination environment</div>
+                            </div>
+                            <div class="figure-item" onclick="openLightbox(this)">
+                                <span class="figure-number">Fig. 2</span>
+                                <img src="/F2.png" 
+                                     alt="Spin-selective insulating states" 
+                                     class="figure-image"
+                                     data-full="/F2.png">
+                                <div class="figure-caption">Spin-selective insulating states in wide-gap regime</div>
+                            </div>
+                            <div class="figure-item" onclick="openLightbox(this)">
+                                <span class="figure-number">Fig. 3</span>
+                                <img src="/F3.png" 
+                                     alt="Enhanced hyperpolarizability measurements" 
+                                     class="figure-image"
+                                     data-full="/F3.png">
+                                <div class="figure-caption">Enhanced hyperpolarizability: theory vs experiment</div>
+                            </div>
+                        </div>
+                    </div>
                 </article>
                 
                 <!-- Publication 2 -->
@@ -91,6 +122,8 @@
                         DOI: 10.1039/D6MA00156D ↗
                     </a>
                 </article>
+                
+                <!-- Publication 3 -->
                 <article class="publication-item">
                     <h3 class="publication-title">
                         Coordination-Induced Orbital Magnetism and Spin-Selective Nodal-Surface Reconstruction in Halogen-Deficient Pd/Pt Square Quantum Dots
@@ -116,6 +149,15 @@
             </div>
         </div>
     </footer>
+    
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Close lightbox">&times;</button>
+            <img id="lightbox-img" class="lightbox-image" src="" alt="">
+            <div id="lightbox-caption" class="lightbox-caption"></div>
+        </div>
+    </div>
     
     <!-- Scripts -->
     <script>
@@ -164,6 +206,30 @@
                 themeIcon.textContent = isDark ? '🌙' : '☀️';
                 localStorage.setItem('theme', isDark ? 'dark' : 'light');
             });
+        });
+        
+        // Lightbox Functions
+        function openLightbox(element) {
+            const img = element.querySelector('.figure-image');
+            const caption = element.querySelector('.figure-caption').textContent;
+            document.getElementById('lightbox-img').src = img.getAttribute('data-full');
+            document.getElementById('lightbox-caption').textContent = caption;
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox(event) {
+            if (event.target.id === 'lightbox' || event.target.classList.contains('lightbox-close')) {
+                document.getElementById('lightbox').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.getElementById('lightbox').classList.remove('active');
+                document.body.style.overflow = '';
+            }
         });
     </script>
     
