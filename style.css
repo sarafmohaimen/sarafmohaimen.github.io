@@ -1012,6 +1012,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-md);
+    align-items: start; /* prevents grid items from stretching */
 }
 
 .figure-item {
@@ -1021,6 +1022,7 @@ footer {
     overflow: hidden;
     transition: border-color var(--transition-fast);
     cursor: pointer;
+    aspect-ratio: 4 / 3; /* consistent aspect ratio for all items */
 }
 
 .figure-item:hover {
@@ -1029,8 +1031,9 @@ footer {
 
 .figure-image {
     width: 100%;
-    height: 160px;
-    object-fit: cover;
+    height: 100%;
+    object-fit: cover; /* fills container, may crop */
+    object-position: center; /* centers the crop */
     display: block;
     filter: grayscale(30%);
     transition: filter var(--transition-base), transform var(--transition-base);
@@ -1040,6 +1043,20 @@ footer {
     filter: grayscale(0%);
     transform: scale(1.03);
 }
+
+/* Alternative: use object-fit: contain to show full image without cropping */
+/*
+.figure-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    filter: grayscale(30%);
+    transition: filter var(--transition-base);
+    background-color: var(--color-surface);
+}
+*/
 
 .figure-number {
     position: absolute;
@@ -1051,6 +1068,7 @@ footer {
     background-color: rgba(255, 255, 255, 0.9);
     padding: 0.25rem 0.5rem;
     border: 1px solid var(--color-border);
+    z-index: 1;
 }
 
 /* Lightbox */
@@ -1073,6 +1091,9 @@ footer {
     position: relative;
     max-width: 90vw;
     max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .lightbox-image {
@@ -1092,6 +1113,7 @@ footer {
     background: none;
     border: none;
     font-family: var(--font-sans);
+    line-height: 1;
 }
 
 /* Responsive */
@@ -1100,8 +1122,8 @@ footer {
         grid-template-columns: 1fr;
     }
     
-    .figure-image {
-        height: 200px;
+    .figure-item {
+        aspect-ratio: 16 / 9; /* wider on mobile */
     }
 }
 
