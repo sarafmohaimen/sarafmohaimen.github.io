@@ -621,6 +621,16 @@ footer {
     }
 }
 
+.publication-orig-title {
+    font-size: 0.9em;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+    font-style: normal;
+}
+.publication-orig-title em {
+    font-style: italic;
+}
+
 /* ============================================
    Projects
    ============================================ */
