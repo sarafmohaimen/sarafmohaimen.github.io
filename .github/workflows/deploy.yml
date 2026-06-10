@@ -1,11 +1,11 @@
 name: Deploy to GitHub Pages
 
 env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true   # This fixes the warning
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 on:
   push:
-    branches: [ main ]        # Change to "master" if your default branch is master
+    branches: [ main ]   
   workflow_dispatch:
 
 permissions:
@@ -28,6 +28,8 @@ jobs:
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'         
 
       - name: Deploy to GitHub Pages
         id: deployment
