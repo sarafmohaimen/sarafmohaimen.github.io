@@ -1,20 +1,12 @@
 # sarafmohaimen.github.io
 
 **Saraf Mohaimen Chowdhury**  
-Researcher in **Quantum Materials** & **Nanoelectronics**  
+Researcher in **Quantum Materials** & **Low-Dimensional Nanoelectronics**  
 📍 Chattogram, Bangladesh  
 
-This is my personal academic website, built and hosted with **GitHub Pages**, where I share my research, publications, and selected projects.  
+This is my personal academic website, built and hosted with **GitHub Pages**, where I share my research and publications.  
 
-🔗 **Visit:** [sarafmohaimen.github.io](https://sarafmohaimen.github.io)  
-
-## Sections
-- **Overview** – My research focus and background  
-- **Publications** – Articles, ongoing works, and perspectives  
-- **Projects** – Highlights of past research  
-- **Gear** – Tools and software I work with  
-- **Profiles** – Links to my academic profiles & contact information  
-- **Retrospective** - Important theoretical concepts applied in my research
+🔗 **Visit:** [sarafmohaimen.github.io](https://sarafmohaimen.github.io)
 
 ## License
 - Code: [MIT License](LICENSE)  
