@@ -76,7 +76,8 @@
                      alt="Saraf Mohaimen Chowdhury" 
                      width="140" 
                      height="140"
-                     loading="eager">
+                     loading="eager"
+                     oncontextmenu="return false;">
             </figure>
             
             <div class="hero-content">
@@ -160,7 +161,10 @@
                 localStorage.setItem('theme', isDark ? 'dark' : 'light');
             });
         });
-        
+
+        document.querySelector('.hero-image img').addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+        });
         
         function trackCvDownload() {
             if (typeof gtag === 'function') {
