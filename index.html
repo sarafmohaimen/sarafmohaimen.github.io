@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-56FS7X77');</script>
-    
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XDLQ8RS51Q"></script>
     <script>
@@ -19,35 +17,29 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saraf Mohaimen Chowdhury - Quantum Materials Research</title>
+    <title>Saraf Mohaimen Chowdhury — Quantum Materials Research</title>
     
     <meta name="google-site-verification" content="bhNhbncvsPYsqkVYkovBdu1ZZ_VIWtmcaORhRZW3zv4" />
     <meta name="description" content="Personal academic website of Saraf Mohaimen Chowdhury, a researcher in quantum materials and nanoelectronics based in Chattogram, Bangladesh.">
     <meta name="keywords" content="Saraf Mohaimen Chowdhury, quantum materials, quantum dots, 2D monolayers, nanoelectronics, DFT, spintronics, Chattogram, Bangladesh">
     
-    
-    <meta property="og:title" content="Saraf Mohaimen Chowdhury - Quantum Materials Research">
+    <meta property="og:title" content="Saraf Mohaimen Chowdhury — Quantum Materials Research">
     <meta property="og:description" content="Researcher in quantum materials and low-dimensional nanoelectronics.">
     <meta property="og:image" content="https://sarafmohaimen.github.io/IMG_9350.JPG">
     <meta property="og:url" content="https://sarafmohaimen.github.io/">
     <meta property="og:type" content="website">
     
-    
     <link rel="stylesheet" href="/style.css">
-    
     
     <script defer src="https://cloud.umami.is/script.js" data-website-id="34b50725-1e92-4061-a2a6-a3007bbe15f2"></script>
 </head>
 <body>
-    
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-56FS7X77"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    
     
     <button class="theme-toggle" aria-label="Toggle dark mode">
         <span class="theme-icon">☀️</span>
     </button>
-    
     
     <header>
         <div class="container header-content">
@@ -56,9 +48,7 @@
                 <p class="header-subtitle">Quantum Materials & Low-Dimensional Nanoelectronics</p>
             </div>
         </div>
-        
     </header>
-    
     
     <main class="container">
         <section class="hero" aria-labelledby="hero-heading">
@@ -85,7 +75,7 @@
             </div>
         </section>
 
-        <section aria-labelledby="interests-heading">
+        <section class="interests-section" aria-labelledby="interests-heading">
             <h2 id="interests-heading">Research Interests</h2>
             
             <div class="content-group">
@@ -104,21 +94,19 @@
         </section>
     </main>
     
-    
     <footer>
         <div class="container footer-content">
             <p>&copy; 2026 Saraf Mohaimen Chowdhury</p>
             <div class="footer-links">
-                <a href="/profiles/">Profiles & contact</a>
+                <a href="/profiles/">Profiles & Contact</a>
                 <a href="/colophon/">Colophon</a>
                 <span class="time-display" id="bd-time"></span>
             </div>
         </div>
     </footer>
     
-    
     <script>
-        
+        // Bangladesh Time
         function updateBDTime() {
             const now = new Date();
             const options = {
@@ -127,18 +115,20 @@
                 hour: '2-digit',
                 minute: '2-digit'
             };
-            document.getElementById('bd-time').textContent = 
-                now.toLocaleTimeString('en-US', options) + ' BST';
+            const timeEl = document.getElementById('bd-time');
+            if (timeEl) {
+                timeEl.textContent = now.toLocaleTimeString('en-US', options) + ' BST';
+            }
         }
         updateBDTime();
         setInterval(updateBDTime, 60000);
-            
-            
+        
+        // Dark Mode Toggle
+        document.addEventListener('DOMContentLoaded', function() {
             const themeToggle = document.querySelector('.theme-toggle');
             const themeIcon = document.querySelector('.theme-icon');
             const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
             const storedTheme = localStorage.getItem('theme');
-            
             
             if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
                 document.body.classList.add('dark-mode');
@@ -153,10 +143,12 @@
             });
         });
 
+        // Image right-click protection
         document.querySelector('.hero-image img').addEventListener('contextmenu', (e) => {
             e.preventDefault();
         });
         
+        // CV Download Tracking
         function trackCvDownload() {
             if (typeof gtag === 'function') {
                 gtag('event', 'download_cv', {
@@ -166,7 +158,6 @@
             }
         }
     </script>
-    
 
     <script data-goatcounter="https://sarafmohaimen.goatcounter.com/count"
             async src="//gc.zgo.at/count.js"></script>
