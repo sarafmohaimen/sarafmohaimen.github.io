@@ -157,8 +157,8 @@
         updateBDTime();
         setInterval(updateBDTime, 60000);
        
-            // Dark Mode Toggle
-    document.addEventListener('DOMContentLoaded', function() {
+        // Dark Mode Toggle
+        document.addEventListener('DOMContentLoaded', function() {
         const themeToggle = document.querySelector('.theme-toggle');
         const themeIcon = document.querySelector('.theme-icon');
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -176,7 +176,7 @@
             localStorage.setItem('theme', isDark ? 'dark' : 'light');
         });
     });
-        
+
     const heroImg = document.querySelector('.hero-image img');
     if (heroImg) {
         heroImg.addEventListener('contextmenu', (e) => {
@@ -184,3 +184,9 @@
         });
     }
 </script>
+
+<script data-goatcounter="https://sarafmohaimen.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>
