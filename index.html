@@ -125,41 +125,33 @@
         
         // Dark Mode Toggle
         document.addEventListener('DOMContentLoaded', function() {
-            const themeToggle = document.querySelector('.theme-toggle');
-            const themeIcon = document.querySelector('.theme-icon');
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const storedTheme = localStorage.getItem('theme');
-            
-            if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
-                document.body.classList.add('dark-mode');
-                themeIcon.textContent = '🌙';
-            }
-            
-            themeToggle.addEventListener('click', function() {
-                document.body.classList.toggle('dark-mode');
-                const isDark = document.body.classList.contains('dark-mode');
-                themeIcon.textContent = isDark ? '🌙' : '☀️';
-                localStorage.setItem('theme', isDark ? 'dark' : 'light');
-            });
+        const themeToggle = document.querySelector('.theme-toggle');
+        const themeIcon = document.querySelector('.theme-icon');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const storedTheme = localStorage.getItem('theme');
+        
+        if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
+            document.body.classList.add('dark-mode');
+            themeIcon.textContent = '🌙';
+        }
+        
+        themeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            const isDark = document.body.classList.contains('dark-mode');
+            themeIcon.textContent = isDark ? '🌙' : '☀️';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
         });
+    });
 
-        // Image right-click protection
-        document.querySelector('.hero-image img').addEventListener('contextmenu', (e) => {
+    const heroImg = document.querySelector('.hero-image img');
+    if (heroImg) {
+        heroImg.addEventListener('contextmenu', (e) => {
             e.preventDefault();
         });
-        
-        // CV Download Tracking
-        function trackCvDownload() {
-            if (typeof gtag === 'function') {
-                gtag('event', 'download_cv', {
-                    'event_category': 'engagement',
-                    'event_label': 'CV Download'
-                });
-            }
-        }
-    </script>
+    }
+</script>
 
-    <script data-goatcounter="https://sarafmohaimen.goatcounter.com/count"
-            async src="//gc.zgo.at/count.js"></script>
+<script data-goatcounter="https://sarafmohaimen.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
