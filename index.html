@@ -57,15 +57,6 @@
             </div>
         </div>
         
-        <nav class="container" role="navigation" aria-label="Main navigation">
-            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
-            <ul class="nav-list">
-                <li><a href="/" class="nav-link" aria-current="page">Home</a></li>
-                <li><a href="/overview/" class="nav-link">Overview</a></li>
-                <li><a href="/publications/" class="nav-link">Publications</a></li>
-                <li><a href="/profiles/" class="nav-link">Profiles</a></li>
-            </ul>
-        </nav>
     </header>
     
     
@@ -74,8 +65,8 @@
             <figure class="hero-image">
                 <img src="/IMG.png" 
                      alt="Saraf Mohaimen Chowdhury" 
-                     width="140" 
-                     height="140"
+                     width="160" 
+                     height="160"
                      loading="eager"
                      oncontextmenu="return false;">
             </figure>
@@ -118,6 +109,7 @@
         <div class="container footer-content">
             <p>&copy; 2026 Saraf Mohaimen Chowdhury</p>
             <div class="footer-links">
+                <a href="/profiles/">Profiles & contact</a>
                 <a href="/colophon/">Colophon</a>
                 <span class="time-display" id="bd-time"></span>
             </div>
@@ -139,21 +131,7 @@
                 now.toLocaleTimeString('en-US', options) + ' BST';
         }
         updateBDTime();
-        setInterval(updateBDTime, 60000); 
-        
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            const navToggle = document.querySelector('.nav-toggle');
-            const navList = document.querySelector('.nav-list');
-            
-            if (navToggle && navList) {
-                navToggle.addEventListener('click', function() {
-                    const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
-                    navToggle.setAttribute('aria-expanded', !isExpanded);
-                    navList.classList.toggle('active');
-                    navToggle.textContent = isExpanded ? 'Menu' : 'Close';
-                });
-            }
+        setInterval(updateBDTime, 60000);
             
             
             const themeToggle = document.querySelector('.theme-toggle');
