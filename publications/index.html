@@ -242,64 +242,33 @@
         updateBDTime();
         setInterval(updateBDTime, 60000);
         
-        // Navigation & Theme
+        // Dark Mode Toggle
         document.addEventListener('DOMContentLoaded', function() {
-            const navToggle = document.querySelector('.nav-toggle');
-            const navList = document.querySelector('.nav-list');
-            
-            if (navToggle && navList) {
-                navToggle.addEventListener('click', function() {
-                    const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
-                    navToggle.setAttribute('aria-expanded', !isExpanded);
-                    navList.classList.toggle('active');
-                    navToggle.textContent = isExpanded ? 'Menu' : 'Close';
-                });
-            }
-            
-            const themeToggle = document.querySelector('.theme-toggle');
-            const themeIcon = document.querySelector('.theme-icon');
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const storedTheme = localStorage.getItem('theme');
-            
-            if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
-                document.body.classList.add('dark-mode');
-                themeIcon.textContent = '🌙';
-            }
-            
-            themeToggle.addEventListener('click', function() {
-                document.body.classList.toggle('dark-mode');
-                const isDark = document.body.classList.contains('dark-mode');
-                themeIcon.textContent = isDark ? '🌙' : '☀️';
-                localStorage.setItem('theme', isDark ? 'dark' : 'light');
-            });
-        });
+        const themeToggle = document.querySelector('.theme-toggle');
+        const themeIcon = document.querySelector('.theme-icon');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const storedTheme = localStorage.getItem('theme');
         
-        // Lightbox Functions
-        function openLightbox(element) {
-            const img = element.querySelector('.figure-image');
-            document.getElementById('lightbox-img').src = img.getAttribute('data-full');
-            document.getElementById('lightbox-caption').textContent = '';
-            document.getElementById('lightbox').classList.add('active');
-            document.body.style.overflow = 'hidden';
+        if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
+            document.body.classList.add('dark-mode');
+            themeIcon.textContent = '🌙';
         }
-
-        function closeLightbox(event) {
-            if (event.target.id === 'lightbox' || event.target.classList.contains('lightbox-close')) {
-                document.getElementById('lightbox').classList.remove('active');
-                document.body.style.overflow = '';
-            }
-        }
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                document.getElementById('lightbox').classList.remove('active');
-                document.body.style.overflow = '';
-            }
+        
+        themeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            const isDark = document.body.classList.contains('dark-mode');
+            themeIcon.textContent = isDark ? '🌙' : '☀️';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
         });
-    </script>
-    
-    <!-- GoatCounter -->
-    <script data-goatcounter="https://sarafmohaimen.goatcounter.com/count"
-            async src="//gc.zgo.at/count.js"></script>
-</body>
-</html>
+    });
+
+    const heroImg = document.querySelector('.hero-image img');
+    if (heroImg) {
+        heroImg.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+        });
+    }
+</script>
+
+<script data-goatcounter="https://sarafmohaimen.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
