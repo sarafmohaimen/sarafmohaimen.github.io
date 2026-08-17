@@ -8,9 +8,6 @@ This is my personal academic website, built and hosted with **GitHub Pages**, wh
 
 🔗 **Visit:** [sarafmohaimen.github.io](https://sarafmohaimen.github.io)
 
-## License
-- Code: [MIT License](LICENSE)  
-- Text & Images: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)  
 
 If you use this site’s source or content, please credit **Saraf Mohaimen Chowdhury** with a link to [sarafmohaimen.github.io](https://sarafmohaimen.github.io).
 
