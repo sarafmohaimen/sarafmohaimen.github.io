@@ -4,7 +4,7 @@
 Researcher in **Quantum Materials** and **Nanoscale Physics**  
 📍 Chattogram, Bangladesh  
 
-This is my personal academic website, built and hosted with **GitHub Pages**, where I share my research and publications.  
+This is SM Chowdhury’s personal academic website, built and hosted with **GitHub Pages**, where he shares information about his research and publications.
 
 🔗 **Visit:** [sarafmohaimen.github.io](https://sarafmohaimen.github.io)
 
